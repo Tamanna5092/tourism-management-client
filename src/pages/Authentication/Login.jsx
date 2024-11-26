@@ -36,7 +36,7 @@ const Login = () => {
   }
 
   // email password signIn
-  const handleSignIn = (e) =>{
+  const handleSignIn = async(e) =>{
     e.preventDefault()
     console.log('hello i am login')
     const form = e.target

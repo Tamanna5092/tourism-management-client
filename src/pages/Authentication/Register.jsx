@@ -1,13 +1,16 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import img from '../../assets/register-img.png'
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { AuthContext } from "../../provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Register = () => {
-  const {showPassword,setShowPassword} = useContext(AuthContext)
+  const {showPassword,setShowPassword, createUser, user, setUser} = useContext(AuthContext)
+  const navigate = useNavigate()
 
-  const handleRegister = (e) =>{
+  
+  const handleRegister = async(e) =>{
     e.preventDefault()
     console.log('hello i am login')
     const form = e.target
@@ -16,6 +19,17 @@ const Register = () => {
     const photo = form.photo.value
     const password = form.password.value
     console.log({username,email, photo, password})
+    try {
+      // register email password
+      const resutl = await createUser(email, password)
+      console.log(resutl.user)
+      setUser(user)
+      navigate('/')
+      toast.success('User created successfully!')
+    } catch (error) {
+      console.log(error)
+      toast.error(error.message)
+    }
   }
 
 
