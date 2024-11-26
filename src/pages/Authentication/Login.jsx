@@ -3,9 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import img from "../../assets/login.jpg";
 import { AuthContext } from "../../provider/AuthProvider";
 import toast from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
-  const { signIn, signInWithGoogle, signInWithGithub } = useContext(AuthContext)
+  const { signIn, signInWithGoogle, signInWithGithub, showPassword, setShowPassword } = useContext(AuthContext)
   const navigate = useNavigate()
 
 
@@ -38,7 +39,10 @@ const Login = () => {
   const handleSignIn = (e) =>{
     e.preventDefault()
     console.log('hello i am login')
-    const form = form.e.target
+    const form = e.target
+    const email = form.email.value
+    const password = form.password.value
+    console.log({email, password})
   }
 
 
@@ -117,13 +121,20 @@ const Login = () => {
                     Forgot password?
                   </a>
                 </div>
+                <div className="relative">
                 <input
-                  type="password"
+                  type={showPassword? "text" : "password"}
                   name="password"
                   id="password"
                   placeholder="******"
                   className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
                 />
+                <span 
+                onClick={()=> setShowPassword(!showPassword)} 
+                className="absolute right-3 top-3">
+                  {showPassword? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
+                </span>
+                </div>
               </div>
             </div>
             <button

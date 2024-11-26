@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import img from '../../assets/register-img.png'
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Register = () => {
+  const {showPassword,setShowPassword} = useContext(AuthContext)
 
   const handleRegister = (e) =>{
     e.preventDefault()
     console.log('hello i am login')
+    const form = e.target
+    const username = form.username.value
+    const email = form.email.value
+    const photo = form.photo.value
+    const password = form.password.value
+    console.log({username,email, photo, password})
   }
 
 
@@ -60,13 +69,16 @@ const Register = () => {
             <label htmlFor="password" className="block dark:text-gray-600">
               Password
             </label>
+            <div className="relative">
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               name="password"
               id="password"
-              placeholder="Password"
+              placeholder="******"
               className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
             />
+            <span onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-4">{showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}</span>
+            </div>
           </div>
           <button className="block w-full bg-info p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600">
             Register
