@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 import img from '../../assets/register-img.png'
 
 const Register = () => {
+
+  const handleRegister = (e) =>{
+    e.preventDefault()
+    console.log('hello i am login')
+  }
+
+
   return (
     <div className="flex flex-col max-w-6xl mx-auto gap-4 md:flex-row">
       {/* image */}
@@ -12,7 +19,7 @@ const Register = () => {
       <div className="w-full md:w-1/2 mx-auto">
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800">
         <h1 className="text-2xl font-bold text-center">Register</h1>
-        <form noValidate="" action="" className="space-y-6">
+        <form onSubmit={handleRegister} noValidate="" action="" className="space-y-6">
           <div className="space-y-1 text-sm">
             <label htmlFor="username" className="block dark:text-gray-600">
               Username

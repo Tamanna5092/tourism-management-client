@@ -5,14 +5,14 @@ import { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 
 const Navbar = () => {
-  const {user} = useContext(AuthContext)
+  const {user, signOutUser} = useContext(AuthContext)
 
     return (
         <div className='navbar bg-base-100 shadow-sm container px-4 mx-auto'>
           <div className='flex-1'>
             <Link to='/' className='flex gap-0 items-center'>
               <img className='w-14 h-14' src={logo} alt='' />
-              <span className='font-bold'>StarShelter</span>
+              <span className='font-roboto font-bold'>StarShelter</span>
             </Link>
           </div>
           <div className='flex-none'>
@@ -33,12 +33,12 @@ const Navbar = () => {
                 role='button'
                 className='btn btn-ghost btn-circle avatar'
               >
-                <div title='' className='w-10 rounded-full'>
+                <div title={user?.displayName} className='w-10 rounded-full'>
                   <img
                     referrerPolicy='no-referrer'
                     alt='User Profile Photo'
-                    src=''
-                  />
+                    src={user?.photoURL}
+/>
                 </div>
               </div>
               <ul
@@ -58,6 +58,7 @@ const Navbar = () => {
                 </li>
                 <li className='mt-2'>
                   <button
+                  onClick={signOutUser}
                     className='bg-gray-200 block text-center'
                   >
                     Logout

@@ -5,7 +5,7 @@ import { AuthContext } from "../../provider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Login = () => {
-  const { signIn, signInWithGoogle } = useContext(AuthContext)
+  const { signIn, signInWithGoogle, signInWithGithub } = useContext(AuthContext)
   const navigate = useNavigate()
 
 
@@ -21,11 +21,24 @@ const Login = () => {
       toast.error(error?.message)
     }
   }
+  // github signIn
+  const handleGithubLogIn = async() => {
+    console.log('hello I am from google')
+    try {
+      await signInWithGithub()
+      toast.success('Sign in Successfull')
+      navigate('/')
+    } catch (error) {
+      console.log(error)
+      toast.error(error?.message)
+    }
+  }
 
   // email password signIn
-  const handleLogIn = async(e) =>{
+  const handleSignIn = (e) =>{
     e.preventDefault()
     console.log('hello i am login')
+    const form = form.e.target
   }
 
 
@@ -57,6 +70,7 @@ const Login = () => {
               <p>Login with Google</p>
             </button>
             <button
+            onClick={handleGithubLogIn}
               aria-label="Login with GitHub"
               role="button"
               className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-600 focus:dark:ring-violet-600"
@@ -76,7 +90,7 @@ const Login = () => {
             <p className="px-3 dark:text-gray-600">OR</p>
             <hr className="w-full dark:text-gray-600" />
           </div>
-          <form onSubmit={handleLogIn} noValidate="" action="" className="space-y-8">
+          <form onSubmit={handleSignIn} noValidate="" action="" className="space-y-8">
             <div className="space-y-4">
               <div className="space-y-2">
                 <label htmlFor="email" className="block text-sm">
@@ -107,13 +121,12 @@ const Login = () => {
                   type="password"
                   name="password"
                   id="password"
-                  placeholder="*****"
+                  placeholder="******"
                   className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
                 />
               </div>
             </div>
             <button
-              type="button"
               className="w-full bg-success px-8 py-3 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50"
             >
               Login

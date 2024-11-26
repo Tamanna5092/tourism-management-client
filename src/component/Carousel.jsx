@@ -31,7 +31,7 @@ import bgimg4 from '../assets/image/Carousel4.jpg'
           className="mySwiper"
         >
           <SwiperSlide>
-            <Slide image={bgimg1}  text={'Explore the World Uncover'}></Slide>
+            <Slide image={bgimg1} text={'Explore the World Uncover'}></Slide>
             </SwiperSlide>
           <SwiperSlide>
             <Slide image={bgimg2} text={'Your Perfect Dream Vacation!'}></Slide>
