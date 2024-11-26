@@ -6,13 +6,12 @@ import { AuthContext } from "../../provider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Register = () => {
-  const {showPassword,setShowPassword, createUser, user, setUser} = useContext(AuthContext)
+  const {showPassword,setShowPassword, createUser, updateUserProfile, user, setUser} = useContext(AuthContext)
   const navigate = useNavigate()
 
   
   const handleRegister = async(e) =>{
     e.preventDefault()
-    console.log('hello i am login')
     const form = e.target
     const username = form.username.value
     const email = form.email.value
@@ -22,8 +21,9 @@ const Register = () => {
     try {
       // register email password
       const resutl = await createUser(email, password)
-      console.log(resutl.user)
-      setUser(user)
+      console.log(resutl)
+      await updateUserProfile(username, photo)
+      setUser({...user, displayName: username, photoURL: photo})
       navigate('/')
       toast.success('User created successfully!')
     } catch (error) {

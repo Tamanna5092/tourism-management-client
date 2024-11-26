@@ -12,7 +12,6 @@ const Login = () => {
 
   // googel signIn
   const handleGoogleLogIn = async() => {
-    console.log('hello I am from google')
     try {
       await signInWithGoogle()
       toast.success('Sign in Successfull')
@@ -24,7 +23,6 @@ const Login = () => {
   }
   // github signIn
   const handleGithubLogIn = async() => {
-    console.log('hello I am from google')
     try {
       await signInWithGithub()
       toast.success('Sign in Successfull')
@@ -35,7 +33,6 @@ const Login = () => {
     }
   }
 
-  // email password signIn
   const handleSignIn = async(e) =>{
     e.preventDefault()
     console.log('hello i am login')
@@ -43,6 +40,16 @@ const Login = () => {
     const email = form.email.value
     const password = form.password.value
     console.log({email, password})
+    try {
+      // email password signIn
+      const result = await signIn(email, password)
+      console.log(result.user)
+      toast.success('Sign in Successfull')
+      navigate('/')
+    } catch (error) {
+      console.log(error)
+      toast.error(error?.message)
+    }
   }
 
 
