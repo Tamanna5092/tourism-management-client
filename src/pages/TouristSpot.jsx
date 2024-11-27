@@ -62,9 +62,26 @@ const TouristSpot = () => {
   };
 
 
+  const handleAddTourisSpot = async(e) =>{
+    e.preventDefault()
+    console.log('Hello world')
+    const form = e.target
+    const image = form.image.value
+    const continent = form.continent.value
+    const country = form.country.value
+    const tourist_spot = form.tourist_spot.value
+    const location = form.location.value
+    const description = form.description.value
+    const average_cost = form.average_cost.value
+    const seasonality = form.seasonality.value
+    const travel_time = form.travel_time.value
+    const totalVisitors = form.totalVisitors.value
+    const email = form.email.value
+    const username = form.username.value
+    console.log({image, continent, country, tourist_spot, location, description, average_cost, seasonality, travel_time, totalVisitors,email, username})
+  }
 
 
-  
 
   return (
     <div>
@@ -76,11 +93,12 @@ const TouristSpot = () => {
         <form onSubmit={handleAddTourisSpot}>
           <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
             <div>
-              <label class="text-gray-700 dark:text-gray-200" for="image">
+              <label class="text-gray-700 dark:text-gray-200" for="text">
                 Image
               </label>
               <input
-                id="text"
+                id="image"
+                name="image"
                 type="text"
                 class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
               />
@@ -105,8 +123,8 @@ const TouristSpot = () => {
               </label>
               <select name="country" id="country">
                 <option value="">Select Country</option>
-                {countries.map((country) => (
-                  <option country={country}>{country}</option>
+                {countries.map((country, index) => (
+                  <option key={index} country={country}>{country}</option>
                 ))}
               </select>
             </div>
@@ -115,7 +133,8 @@ const TouristSpot = () => {
                 Tourist Spot Name
               </label>
               <input
-                id="tourist_spot_name"
+                id="tourist_spot"
+                name="tourist_spot"
                 type="text"
                 class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
               />
@@ -126,6 +145,7 @@ const TouristSpot = () => {
               </label>
               <input
                 id="location"
+                name="location"
                 type="text"
                 class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
               />
@@ -136,6 +156,7 @@ const TouristSpot = () => {
               </label>
               <input
                 id="description"
+                name="description"
                 type="text"
                 class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
               />
@@ -146,6 +167,7 @@ const TouristSpot = () => {
               </label>
               <input
                 id="average_cost"
+                name="average_cost"
                 type="text"
                 class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
               />
@@ -157,6 +179,7 @@ const TouristSpot = () => {
               </label>
               <input
                 id="seasonality"
+                name="seasonality"
                 type="text"
                 class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
               />
@@ -168,7 +191,8 @@ const TouristSpot = () => {
               </label>
               <input
                 id="travel_time"
-                type="travel_time"
+                name="travel_time"
+                type="text"
                 class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
               />
             </div>
@@ -181,19 +205,21 @@ const TouristSpot = () => {
               </label>
               <input
                 id="totalVisitors"
-                type="totalVisitors"
+                name="totalVisitors"
+                type="text"
                 class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
               />
             </div>
             <div>
               <label
                 class="text-gray-700 dark:text-gray-200"
-                for="emailAddress"
+                for="email"
               >
                 Email Address
               </label>
               <input
-                id="emailAddress"
+                id="email"
+                name="email"
                 type="email"
                 class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
               />
@@ -205,6 +231,7 @@ const TouristSpot = () => {
               </label>
               <input
                 id="username"
+                name="username"
                 type="text"
                 class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
               />
