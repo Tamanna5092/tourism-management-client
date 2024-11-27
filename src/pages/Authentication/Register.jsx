@@ -8,8 +8,8 @@ import toast from "react-hot-toast";
 const Register = () => {
   const {showPassword,setShowPassword, createUser, updateUserProfile, user, setUser} = useContext(AuthContext)
   const navigate = useNavigate()
+  const [error, setError] = useState('')
 
-  
   const handleRegister = async(e) =>{
     e.preventDefault()
     const form = e.target
@@ -18,6 +18,18 @@ const Register = () => {
     const photo = form.photo.value
     const password = form.password.value
     console.log({username,email, photo, password})
+
+    
+    if (password.length < 6) {
+      setError("Your password must be 6 characters");
+      return;
+    } else if (!/^(?=.*[A-Z])(?=.*\d).+$/.test(password)) {
+      setError(
+        "Password must be contain at least one uppercase letter and one number."
+      );
+      return;
+    }
+
     try {
       // register email password
       const resutl = await createUser(email, password)
@@ -28,7 +40,7 @@ const Register = () => {
       toast.success('User created successfully!')
     } catch (error) {
       console.log(error)
-      toast.error(error.message)
+      toast.error(error?.message)
     }
   }
 
@@ -98,6 +110,7 @@ const Register = () => {
             Register
           </button>
         </form>
+        {setError && <p className="text-red-800 text-center">{error}</p>}
         <div className="flex justify-center">
           <Link
             to={"/login"}

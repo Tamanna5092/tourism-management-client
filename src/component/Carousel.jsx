@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/scrollbar'
 
 // import required modules
-import { Scrollbar, Autoplay } from 'swiper/modules';
+import { Scrollbar, Autoplay , Pagination} from 'swiper/modules';
 import Slide from './Slide';
 
 import bgimg1 from '../assets/image/Carousel1.webp'
@@ -27,7 +27,10 @@ import bgimg4 from '../assets/image/Carousel4.jpg'
             delay: 5000,
             disableOnInteraction: false,
           }}
-          modules={[Scrollbar, Autoplay]}
+          pagination={{
+            clickable: true
+          }}
+          modules={[Scrollbar, Autoplay, Pagination]}
           className="mySwiper"
         >
           <SwiperSlide>

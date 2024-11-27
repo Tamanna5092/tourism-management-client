@@ -3,6 +3,7 @@ import Root from "../layouts/Root";
 import Home from "../pages/Home";
 import Login from "../pages/Authentication/Login";
 import Register from "../pages/Authentication/Register";
+import TouristSpot from "../pages/TouristSpot";
 
 const router = createBrowserRouter([
   {
@@ -11,7 +12,8 @@ const router = createBrowserRouter([
     children:[
         {
             index: true,
-            element: <Home></Home>
+            element: <Home></Home>,
+            loader: ()=> fetch(`${import.meta.env.VITE_API_URL}/touristsSpot`)
         },
         {
             path: '/login',
@@ -20,6 +22,11 @@ const router = createBrowserRouter([
         {
           path: '/register',
           element: <Register></Register>
+        },
+        {
+          path: '/addTourisSpot',
+          element: <TouristSpot></TouristSpot>,
+          loader: ()=> fetch('../country.json')
         }
     ]
   },
