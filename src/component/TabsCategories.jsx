@@ -1,8 +1,22 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import CountryCard from "./CountryCard";
+import { useEffect, useState } from "react";
+import axios from 'axios'
 
-const TabsCategories = ({ touristsSpots }) => {
+const TabsCategories = () => {
+  const [touristsSpots, setTouristsSpots] = useState([])
+
+    useEffect(() => {
+      const getData = async() => {
+        const {data} = await axios(`${import.meta.env.VITE_API_URL}/touristsSpots`)
+        console.log(data)
+        setTouristsSpots(data)
+      }
+      getData()
+    }, [])
+  
+
   return (
     <Tabs>
       <div className="my-10 max-w-7xl mx-auto">

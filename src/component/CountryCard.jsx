@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CountryCard = ({ touristSpot }) => {
-  const { country_name, average_cost, total_visitors_per_year, travel_time, seasonality } = touristSpot;
+  const { _id, country_name, average_cost, description } = touristSpot;
   return (
     <div class="w-full overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
       <img
@@ -19,15 +20,13 @@ const CountryCard = ({ touristSpot }) => {
         >
           {country_name}
         </a>
+        <p>{average_cost}</p>
         <p class="text-sm text-gray-700 dark:text-gray-200">
-          {average_cost}
+          {description}
         </p>
-        <p>{total_visitors_per_year}</p>
-        <p>{travel_time}</p>
-        <p>{seasonality}</p>
-        <div className="card-actions justify-center">
+        <Link to={`/touristsSpot/${_id}`} className="card-actions justify-center">
           <button className="btn btn-primary">View Details</button>
-        </div>
+        </Link>
       </div>
     </div>
   );

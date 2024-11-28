@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Login from "../pages/Authentication/Login";
 import Register from "../pages/Authentication/Register";
 import TouristSpot from "../pages/TouristSpot";
+import CountryDetails from "../pages/CountryDetails";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,6 @@ const router = createBrowserRouter([
         {
             index: true,
             element: <Home></Home>,
-            loader: ()=> fetch(`${import.meta.env.VITE_API_URL}/touristsSpot`)
         },
         {
             path: '/login',
@@ -27,6 +27,11 @@ const router = createBrowserRouter([
           path: '/addTourisSpot',
           element: <TouristSpot></TouristSpot>,
           loader: ()=> fetch('../country.json')
+        },
+        {
+          path: '/touristsSpot/:id',
+          element: <CountryDetails></CountryDetails>,
+          loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/touristsSpot/${params.id}`)
         }
     ]
   },
