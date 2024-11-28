@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const TouristSpot = () => {
+const AddTouristSpot = () => {
   const [continent, setContinent] = useState("");
   const [countries, setCountries] = useState([]);
 
@@ -249,4 +249,4 @@ const TouristSpot = () => {
   );
 };
 
-export default TouristSpot;
+export default AddTouristSpot;

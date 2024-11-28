@@ -5,10 +5,10 @@ const CountryDetails = () => {
     const touristsSpot = useLoaderData()
     const { _id, image, continent, country_name, tourist_spot_name, location, description, average_cost, total_visitors_per_year, travel_time, seasonality, email_address, user_name } = touristsSpot;
     return (
-        <div class="max-w-2xl overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
-    <img class="object-cover w-full h-64" src="https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Article"/>
+        <div class="  overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <img class="object-cover w-full h-[600px] bg-cover" src="https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Article"/>
 
-    <div class="p-6">
+    <div class="max-w-7xl mx-auto p-6">
         <div>
             <span class="text-xs font-medium text-blue-600 uppercase dark:text-blue-400">{continent}</span>
             <p href="#" class="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600">{country_name}</p>

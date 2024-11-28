@@ -3,7 +3,7 @@ import Root from "../layouts/Root";
 import Home from "../pages/Home";
 import Login from "../pages/Authentication/Login";
 import Register from "../pages/Authentication/Register";
-import TouristSpot from "../pages/TouristSpot";
+import AddTouristSpot from "../pages/AddTouristSpot";
 import CountryDetails from "../pages/CountryDetails";
 
 const router = createBrowserRouter([
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/addTourisSpot',
-          element: <TouristSpot></TouristSpot>,
+          element: <AddTouristSpot></AddTouristSpot>,
           loader: ()=> fetch('../country.json')
         },
         {
