@@ -4,12 +4,12 @@ import TabsCategories from '../component/TabsCategories';
 import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
-    const touristsSpot = useLoaderData()
-    console.log(touristsSpot)
+    const touristsSpots = useLoaderData()
+    console.log(touristsSpots)
     return (
         <div>
             <Carousel></Carousel>
-            <TabsCategories></TabsCategories>
+            <TabsCategories touristsSpots={touristsSpots}></TabsCategories>
         </div>
     );
 };

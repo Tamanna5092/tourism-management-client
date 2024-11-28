@@ -2,7 +2,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import CountryCard from "./CountryCard";
 
-const TabsCategories = () => {
+const TabsCategories = ({ touristsSpots }) => {
   return (
     <Tabs>
       <div className="my-10 max-w-7xl mx-auto">
@@ -27,24 +27,46 @@ const TabsCategories = () => {
         </div>
 
         <TabPanel>
-          <h2>
-            <CountryCard></CountryCard>
-          </h2>
+          <div className="grid grid-cols-1 gap-8 mx-2 my-10 md:grid-cols-2 lg:grid-cols-3 lg:mx-0">
+            {
+              touristsSpots.filter(tourSpot => tourSpot.continent === "Southeast Asia").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
+            }
+          </div>
         </TabPanel>
         <TabPanel>
-          <h2>Any content 2</h2>
+        <div className="grid grid-cols-1 gap-8 mx-2 my-10 md:grid-cols-2 lg:grid-cols-3 lg:mx-0">
+            {
+              touristsSpots.filter(tourSpot => tourSpot.continent === "Europe").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
+            }
+          </div>
         </TabPanel>
         <TabPanel>
-          <h2>Any content 3</h2>
+        <div className="grid grid-cols-1 gap-8 mx-2 my-10 md:grid-cols-2 lg:grid-cols-3 lg:mx-0">
+            {
+              touristsSpots.filter(tourSpot => tourSpot.continent === "America").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
+            }
+          </div>
         </TabPanel>
         <TabPanel>
-          <h2>Any content 4</h2>
+        <div className="grid grid-cols-1 gap-8 mx-2 my-10 md:grid-cols-2 lg:grid-cols-3 lg:mx-0">
+            {
+              touristsSpots.filter(tourSpot => tourSpot.continent === "Africa").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
+            }
+          </div>
         </TabPanel>
         <TabPanel>
-          <h2>Any content 5</h2>
+        <div className="grid grid-cols-1 gap-8 mx-2 my-10 md:grid-cols-2 lg:grid-cols-3 lg:mx-0">
+            {
+              touristsSpots.filter(tourSpot => tourSpot.continent === "Middle East").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
+            }
+          </div>
         </TabPanel>
         <TabPanel>
-          <h2>Any content 6</h2>
+        <div className="grid grid-cols-1 gap-8 mx-2 my-10 md:grid-cols-2 lg:grid-cols-3 lg:mx-0">
+            {
+              touristsSpots.filter(tourSpot => tourSpot.continent === "Central Asia").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
+            }
+          </div>
         </TabPanel>
       </div>
     </Tabs>
