@@ -1,22 +1,36 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const MyListedSpots = () => {
   const { user } = useContext(AuthContext);
   const [touristsSpots, setTouristsSpots] = useState([]);
 
   useEffect(() => {
-    const getData = async () => {
-      const { data } = await axios(
-        `${import.meta.env.VITE_API_URL}/touristsSpots/${user?.email}`
-      );
-      console.log(data);
-      setTouristsSpots(data);
-    };
     getData();
   }, [user]);
-  console.log(touristsSpots);
+
+  const getData = async () => {
+    const { data } = await axios(
+      `${import.meta.env.VITE_API_URL}/touristsSpots/${user?.email}`
+    );
+    console.log(data);
+    setTouristsSpots(data);
+  };
+
+  const handleDelete = async(id) => {
+    console.log('Hello Delete')
+    try {
+        const {data} = await axios.delete(`${import.meta.env.VITE_API_URL}/touristsSpot/${id}`)
+        console.log(data)
+        toast.success('Delete Successfull')
+        getData()
+    } catch (error) {
+        console.log(error.message)
+        toast.error(error);
+    }
+  }
 
   return (
     <section class="container px-4 mx-auto">
@@ -42,7 +56,7 @@ const MyListedSpots = () => {
                       class="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
                     >
                       <div class="flex items-center gap-x-3">
-                        <span>User Info</span>
+                        <span>Country</span>
                       </div>
                     </th>
 
@@ -50,32 +64,38 @@ const MyListedSpots = () => {
                       scope="col"
                       class="px-12 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
                     >
-                      <button class="flex items-center gap-x-2">
+                      <div class="flex items-center gap-x-3">
+                        <span>Tourist Spot</span>
+                      </div>
+                    </th>
+
+                    <th
+                      scope="col"
+                      class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                    >
+                      <div class="flex items-center gap-x-3">
                         <span>Location</span>
-                      </button>
+                      </div>
                     </th>
 
                     <th
                       scope="col"
                       class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
                     >
-                      <button class="flex items-center gap-x-2">
-                        <span>Role</span>
-                      </button>
+                      Average Cost
                     </th>
 
                     <th
                       scope="col"
                       class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
                     >
-                      Email address
+                      Seasonality
                     </th>
-
                     <th
                       scope="col"
                       class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
                     >
-                      Teams
+                      Travel Time
                     </th>
 
                     <th scope="col" class="relative py-3.5 px-4">
@@ -116,19 +136,15 @@ const MyListedSpots = () => {
                       <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
                         {touristSpot.average_cost}
                       </td>
-                      <td class="px-4 py-4 text-sm whitespace-nowrap">
                         <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
                           {touristSpot.seasonality}
                         </td>
-                        {/* <div class="flex items-center gap-x-2">
-                                            <p class="px-3 py-1 text-xs text-indigo-500 rounded-full dark:bg-gray-800 bg-indigo-100/60">Design</p>
-                                            <p class="px-3 py-1 text-xs text-blue-500 rounded-full dark:bg-gray-800 bg-blue-100/60">Product</p>
-                                            <p class="px-3 py-1 text-xs text-pink-500 rounded-full dark:bg-gray-800 bg-pink-100/60">Marketing</p>
-                                        </div> */}
+                      <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+                        {touristSpot.travel_time}
                       </td>
                       <td class="px-4 py-4 text-sm whitespace-nowrap">
                         <div class="flex items-center gap-x-6">
-                          <button class="text-gray-500 transition-colors duration-200 dark:hover:text-red-500 dark:text-gray-300 hover:text-red-500 focus:outline-none">
+                          <button onClick={()=> handleDelete(touristSpot._id)} className="text-gray-500 transition-colors duration-200 dark:hover:text-red-500 dark:text-gray-300 hover:text-red-500 focus:outline-none">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"
@@ -145,7 +161,7 @@ const MyListedSpots = () => {
                             </svg>
                           </button>
 
-                          <button class="text-gray-500 transition-colors duration-200 dark:hover:text-yellow-500 dark:text-gray-300 hover:text-yellow-500 focus:outline-none">
+                          <button className="text-gray-500 transition-colors duration-200 dark:hover:text-yellow-500 dark:text-gray-300 hover:text-yellow-500 focus:outline-none">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"
@@ -171,38 +187,6 @@ const MyListedSpots = () => {
           </div>
         </div>
       </div>
-
-      {/* <div class="flex items-center justify-between mt-6">
-        <a href="#" class="flex items-center px-5 py-2 text-sm text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 rtl:-scale-x-100">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
-            </svg>
-
-            <span>
-                previous
-            </span>
-        </a>
-
-        <div class="items-center hidden lg:flex gap-x-3">
-            <a href="#" class="px-2 py-1 text-sm text-blue-500 rounded-md dark:bg-gray-800 bg-blue-100/60">1</a>
-            <a href="#" class="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100">2</a>
-            <a href="#" class="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100">3</a>
-            <a href="#" class="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100">...</a>
-            <a href="#" class="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100">12</a>
-            <a href="#" class="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100">13</a>
-            <a href="#" class="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100">14</a>
-        </div>
-
-        <a href="#" class="flex items-center px-5 py-2 text-sm text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800">
-            <span>
-                Next
-            </span>
-
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 rtl:-scale-x-100">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-            </svg>
-        </a>
-    </div> */}
     </section>
   );
 };
