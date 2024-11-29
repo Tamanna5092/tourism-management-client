@@ -5,6 +5,7 @@ import Login from "../pages/Authentication/Login";
 import Register from "../pages/Authentication/Register";
 import AddTouristSpot from "../pages/AddTouristSpot";
 import CountryDetails from "../pages/CountryDetails";
+import MyListedSpots from "../pages/MyListedSpots";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
           path: '/touristsSpot/:id',
           element: <CountryDetails></CountryDetails>,
           loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/touristsSpot/${params.id}`)
+        },
+        {
+          path: '/myListedSpots',
+          element: <MyListedSpots></MyListedSpots>
         }
     ]
   },

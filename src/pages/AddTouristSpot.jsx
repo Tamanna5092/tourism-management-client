@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AuthContext } from "../provider/AuthProvider";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const AddTouristSpot = () => {
   const [continent, setContinent] = useState("");
   const [countries, setCountries] = useState([]);
+  const { user } = useContext(AuthContext);
 
-  const countryData = {
+  const continentAndCountryData = {
     "Southeast Asia": [
       "Bangladesh",
       "Thailand",
@@ -58,30 +62,69 @@ const AddTouristSpot = () => {
   const handleContinent = (e) => {
     const selectedContinent = e.target.value;
     setContinent(selectedContinent);
-    setCountries(countryData[selectedContinent] || []);
+    setCountries(continentAndCountryData[selectedContinent] || []);
   };
 
+  const handleAddTourisSpot = async (e) => {
+    e.preventDefault();
+    console.log("Hello world");
+    const form = e.target;
+    const image = form.image.value;
+    const continent = form.continent.value;
+    const country = form.country.value;
+    const tourist_spot = form.tourist_spot.value;
+    const location = form.location.value;
+    const description = form.description.value;
+    const average_cost = form.average_cost.value;
+    const seasonality = form.seasonality.value;
+    const travel_time = form.travel_time.value;
+    const totalVisitors = form.totalVisitors.value;
+    const email = form.email.value;
+    const username = form.username.value;
+    console.log({
+      image,
+      continent,
+      country,
+      tourist_spot,
+      location,
+      description,
+      average_cost,
+      seasonality,
+      travel_time,
+      totalVisitors,
+      email,
+      username
+    });
 
-  const handleAddTourisSpot = async(e) =>{
-    e.preventDefault()
-    console.log('Hello world')
-    const form = e.target
-    const image = form.image.value
-    const continent = form.continent.value
-    const country = form.country.value
-    const tourist_spot = form.tourist_spot.value
-    const location = form.location.value
-    const description = form.description.value
-    const average_cost = form.average_cost.value
-    const seasonality = form.seasonality.value
-    const travel_time = form.travel_time.value
-    const totalVisitors = form.totalVisitors.value
-    const email = form.email.value
-    const username = form.username.value
-    console.log({image, continent, country, tourist_spot, location, description, average_cost, seasonality, travel_time, totalVisitors,email, username})
-  }
-
-
+    const countryData = {
+      image,
+      continent,
+      country,
+      tourist_spot,
+      location,
+      description,
+      average_cost,
+      seasonality,
+      travel_time,
+      totalVisitors,
+      user:{
+        username,
+        email,
+        photo: user?.photoURL
+        
+      }
+    };
+    try {
+      const { data } = await axios.post(
+        `${import.meta.env.VITE_API_URL}/touristsSpot`,
+        countryData
+      );
+      console.log(data)
+      toast.success("Touris Spot Added Successful!");
+    } catch (error) {
+      toast.error(error);
+    }
+  };
 
   return (
     <div>
@@ -124,7 +167,9 @@ const AddTouristSpot = () => {
               <select name="country" id="country">
                 <option value="">Select Country</option>
                 {countries.map((country, index) => (
-                  <option key={index} country={country}>{country}</option>
+                  <option key={index} country={country}>
+                    {country}
+                  </option>
                 ))}
               </select>
             </div>
@@ -146,17 +191,6 @@ const AddTouristSpot = () => {
               <input
                 id="location"
                 name="location"
-                type="text"
-                class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
-              />
-            </div>
-            <div>
-              <label class="text-gray-700 dark:text-gray-200" for="text">
-                Description
-              </label>
-              <input
-                id="description"
-                name="description"
                 type="text"
                 class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
               />
@@ -211,16 +245,25 @@ const AddTouristSpot = () => {
               />
             </div>
             <div>
-              <label
-                class="text-gray-700 dark:text-gray-200"
-                for="email"
-              >
+              <label class="text-gray-700 dark:text-gray-200" for="text">
+                Description
+              </label>
+              <input
+                id="description"
+                name="description"
+                type="text"
+                class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+              />
+            </div>
+            <div>
+              <label class="text-gray-700 dark:text-gray-200" for="email">
                 Email Address
               </label>
               <input
                 id="email"
                 name="email"
                 type="email"
+                defaultValue={user?.email}
                 class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
               />
             </div>
@@ -233,6 +276,7 @@ const AddTouristSpot = () => {
                 id="username"
                 name="username"
                 type="text"
+                defaultValue={user?.displayName}
                 class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
               />
             </div>

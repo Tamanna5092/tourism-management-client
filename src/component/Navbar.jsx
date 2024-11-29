@@ -54,7 +54,7 @@ const Navbar = () => {
                   <Link to='/addTourisSpot'>Add Tourists Spot</Link>
                 </li>
                 <li>
-                  <Link to=''>My List</Link>
+                  <Link to='myListedSpots'>My Listed Spots</Link>
                 </li>
                 <li className='mt-2'>
                   <button
