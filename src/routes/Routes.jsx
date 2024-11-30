@@ -7,6 +7,7 @@ import AddTouristSpot from "../pages/AddTouristSpot";
 import CountryDetails from "../pages/CountryDetails";
 import MyListedSpots from "../pages/MyListedSpots";
 import AllTouristSpots from "../pages/AllTouristSpots";
+import UpdateTouristSpot from "../pages/UpdateTouristSpot";
 
 const router = createBrowserRouter([
   {
@@ -27,8 +28,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/addTourisSpot',
-          element: <AddTouristSpot></AddTouristSpot>,
-          loader: ()=> fetch('../country.json')
+          element: <AddTouristSpot></AddTouristSpot>
         },
         {
           path: '/touristsSpot/:id',
@@ -42,6 +42,11 @@ const router = createBrowserRouter([
         {
           path: '/allTouristSpots',
           element: <AllTouristSpots></AllTouristSpots>
+        },
+        {
+          path: '/updateTouristSpot/:id',
+          element: <UpdateTouristSpot></UpdateTouristSpot>,
+          loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/touristsSpot/${params.id}`)
         }
     ]
   },
