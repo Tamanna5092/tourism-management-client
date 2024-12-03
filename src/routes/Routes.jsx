@@ -8,15 +8,17 @@ import CountryDetails from "../pages/CountryDetails";
 import MyListedSpots from "../pages/MyListedSpots";
 import AllTouristSpots from "../pages/AllTouristSpots";
 import UpdateTouristSpot from "../pages/UpdateTouristSpot";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children:[
         {
             index: true,
-            element: <Home></Home>,
+            element: <Home></Home>
         },
         {
             path: '/login',
