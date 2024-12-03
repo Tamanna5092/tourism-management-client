@@ -18,7 +18,7 @@ const UpdateTouristSpot = () => {
     const tourist_spot = form.tourist_spot.value;
     const location = form.location.value;
     const description = form.description.value;
-    const average_cost = form.average_cost.value;
+    const average_cost = parseInt(form.average_cost.value);
     const seasonality = form.seasonality.value;
     const travel_time = form.travel_time.value;
     const totalVisitors = form.totalVisitors.value;

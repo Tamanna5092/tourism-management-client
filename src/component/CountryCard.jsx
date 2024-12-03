@@ -20,9 +20,9 @@ const CountryCard = ({ touristSpot }) => {
         >
           {country}
         </a>
-        <p>{average_cost}</p>
+        <p>${average_cost}</p>
         <p class="text-sm text-gray-700 dark:text-gray-200">
-          {description}
+          {description.slice(0-300)}
         </p>
         <Link to={`/touristsSpot/${_id}`} className="card-actions justify-center">
           <button className="btn btn-primary">View Details</button>

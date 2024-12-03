@@ -15,7 +15,7 @@ const CountryDetails = () => {
             <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">{tourist_spot}</p>
             <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">{location}</p>
             <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">{description}</p>
-            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">{average_cost}</p>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">${average_cost}</p>
             <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">{seasonality}</p>
             <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">{travel_time}</p>
             <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">{totalVisitors}</p>

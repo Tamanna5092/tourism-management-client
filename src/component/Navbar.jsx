@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../public/logo.png'
 import { useContext } from 'react';
@@ -6,6 +6,11 @@ import { AuthContext } from '../provider/AuthProvider';
 
 const Navbar = () => {
   const {user, signOutUser} = useContext(AuthContext)
+  const [dropdownOpen , setDropdownOpen] = useState(false)
+
+  const handleToggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen)
+  }
 
     return (
         <div className='navbar bg-base-100 shadow-sm container px-4 mx-auto'>
@@ -27,7 +32,7 @@ const Navbar = () => {
                   }
             </ul> 
               {user && 
-              <div className='dropdown dropdown-end z-50'>
+              <div onClick={handleToggleDropdown} className='dropdown dropdown-end z-50'>
               <div
                 tabIndex={0}
                 role='button'
@@ -41,7 +46,9 @@ const Navbar = () => {
 />
                 </div>
               </div>
-              <ul
+              {
+                dropdownOpen && (
+                  <ul
                 tabIndex={0}
                 className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
               >
@@ -65,6 +72,8 @@ const Navbar = () => {
                   </button>
                 </li>
               </ul>
+                )
+              }
             </div>
               }
           </div>

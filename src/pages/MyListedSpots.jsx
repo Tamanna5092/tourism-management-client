@@ -135,7 +135,7 @@ const MyListedSpots = () => {
                         {touristSpot.location}
                       </td>
                       <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-                        {touristSpot.average_cost}
+                        ${touristSpot.average_cost}
                       </td>
                         <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
                           {touristSpot.seasonality}
