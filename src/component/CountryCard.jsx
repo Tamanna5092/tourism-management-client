@@ -11,7 +11,7 @@ const CountryCard = ({ touristSpot }) => {
         alt="avatar"
       />
 
-      <div class="py-5 text-center">
+      <div class="py-5 text-center px-2">
         <a
           href="#"
           class="block text-xl font-bold text-gray-800 dark:text-white"
@@ -21,8 +21,8 @@ const CountryCard = ({ touristSpot }) => {
           {country}
         </a>
         <p>${average_cost}</p>
-        <p class="text-sm text-gray-700 dark:text-gray-200">
-          {description.slice(0-300)}
+        <p class="text-sm text-justify text-gray-700 dark:text-gray-200">
+          {description.slice(0,230)}
         </p>
         <Link to={`/touristsSpot/${_id}`} className="card-actions justify-center">
           <button className="btn btn-primary">View Details</button>

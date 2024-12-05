@@ -9,6 +9,7 @@ import MyListedSpots from "../pages/MyListedSpots";
 import AllTouristSpots from "../pages/AllTouristSpots";
 import UpdateTouristSpot from "../pages/UpdateTouristSpot";
 import ErrorPage from "../pages/ErrorPage";
+import GuideInfo from "../pages/GuideInfo";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,8 @@ const router = createBrowserRouter([
     children:[
         {
             index: true,
-            element: <Home></Home>
+            element: <Home></Home>,
+            loader: ()=> fetch('../guides.json')
         },
         {
             path: '/login',
@@ -49,6 +51,10 @@ const router = createBrowserRouter([
           path: '/updateTouristSpot/:id',
           element: <UpdateTouristSpot></UpdateTouristSpot>,
           loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/touristsSpot/${params.id}`)
+        },
+        {
+          path: '/guideInfo',
+          element: <GuideInfo></GuideInfo>
         }
     ]
   },
