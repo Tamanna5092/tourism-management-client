@@ -63,6 +63,15 @@ const Navbar = () => {
                 <li>
                   <Link to='myListedSpots'>My Listed Spots</Link>
                 </li>
+                <li>
+                  <Link to=''>Blog</Link>
+                </li>
+                <li>
+                  <Link to=''>About</Link>
+                </li>
+                <li>
+                  <Link to=''>Contact Us</Link>
+                </li>
                 <li className='mt-2'>
                   <button
                   onClick={signOutUser}
