@@ -53,8 +53,10 @@ const router = createBrowserRouter([
           loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/touristsSpot/${params.id}`)
         },
         {
-          path: '/guideInfo',
-          element: <GuideInfo></GuideInfo>
+          path: '/guideInfo/:id',
+          element: <GuideInfo></GuideInfo>,
+          // loader: ({params})=> fetch(`../guides.json/guideInfo/${params.id}`)
+          loader: ()=> fetch('../guides.json')
         }
     ]
   },

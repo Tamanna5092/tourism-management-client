@@ -1,6 +1,6 @@
 [
     {
-      "id": 1,
+      "id": 0,
       "name": "Liam Johnson",
       "continent": "Southeast Asia",
       "image": "https://i.ibb.co.com/zJg2mqx/pexels-uriel-mont-6271299.jpg",
@@ -13,7 +13,7 @@
       }
     },
     {
-      "id": 2,
+      "id": 1,
       "name": "Sophia Carter",
       "continent": "Europe",
       "image": "https://i.ibb.co.com/QvqnHrq/istockphoto-1311452628-612x612.jpg",
@@ -26,7 +26,7 @@
       }
     },
     {
-      "id": 3,
+      "id": 2,
       "name": "Carlos Rivera",
       "continent": "America",
       "image": "https://i.ibb.co.com/HtSYcy0/pexels-kelly-1179532-3030332.jpg",
@@ -39,7 +39,7 @@
       }
     },
     {
-      "id": 4,
+      "id": 3,
       "name": "Aisha Ahmed",
       "continent": "Middle East",
       "image": "https://i.ibb.co.com/4NGhfGB/images.jpg",
@@ -52,7 +52,7 @@
       }
     },
     {
-      "id": 5,
+      "id": 4,
       "name": "Nia Okafor",
       "continent": "Africa",
       "image": "https://i.ibb.co.com/svgcyMM/pexels-yaroslav-shuraev-8968842.jpg",
@@ -65,7 +65,7 @@
       }
     },
     {
-      "id": 6,
+      "id": 5,
       "name": "Arjun Sharma",
       "continent": "Central Asia",
       "image": "https://i.ibb.co.com/xC9T1XK/pexels-lureofadventure-10772325.jpg",
