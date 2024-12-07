@@ -4,8 +4,6 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper/modules";
 import { Link, useLoaderData } from "react-router-dom";
-import { FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
 
 const OurGuides = () => {
   const guides = useLoaderData();

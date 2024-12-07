@@ -55,7 +55,6 @@ const router = createBrowserRouter([
         {
           path: '/guideInfo/:id',
           element: <GuideInfo></GuideInfo>,
-          // loader: ({params})=> fetch(`../guides.json/guideInfo/${params.id}`)
           loader: ()=> fetch('../guides.json')
         }
     ]
