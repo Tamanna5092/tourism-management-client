@@ -21,12 +21,12 @@ const Navbar = () => {
             </Link>
           </div>
           <div className='flex-none'>
-            <ul className='menu menu-horizontal px-1'>
-              <li>
-                <Link to='/'>Home</Link>
+            <ul className='menu menu-horizontal space-x-2 text-white px-1'>
+              <li className=' bg-orange-400 hover:bg-[#383838] rounded-lg'>
+                <Link to='/' className=''>Home</Link>
               </li>
                   {!user &&
-                <li>
+                <li className=' className="bg-orange-400" hover:bg-[#383838] rounded-xl'>
                   <Link to='/login'>Login</Link>
                 </li> 
                   }
@@ -52,30 +52,30 @@ const Navbar = () => {
                 tabIndex={0}
                 className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
               >
-                <li>
-                  <Link to='/allTouristSpots' className='justify-between'>
+                <li className="hover:bg-[#383838] rounded-lg hover:text-white">
+                  <Link to='/allTouristSpots'>
                   All Tourists Spot
                   </Link>
                 </li>
-                <li>
+                <li className="hover:bg-[#383838] rounded-lg hover:text-white">
                   <Link to='/addTourisSpot'>Add Tourists Spot</Link>
                 </li>
-                <li>
-                  <Link to='myListedSpots'>My Listed Spots</Link>
+                <li className="hover:bg-[#383838] rounded-lg hover:text-white">
+                  <Link to='/myListedSpots'>My Listed Spots</Link>
                 </li>
-                <li>
+                <li className="hover:bg-[#383838] rounded-lg hover:text-white">
                   <Link to=''>Blog</Link>
                 </li>
-                <li>
+                <li className="hover:bg-[#383838] rounded-lg hover:text-white">
                   <Link to=''>About</Link>
                 </li>
-                <li>
+                <li className="hover:bg-[#383838] rounded-lg hover:text-white">
                   <Link to=''>Contact Us</Link>
                 </li>
                 <li className='mt-2'>
                   <button
                   onClick={signOutUser}
-                    className='bg-gray-200 block text-center'
+                    className='text-white bg-orange-400 hover:bg-[#383838] block text-center'
                   >
                     Logout
                   </button>

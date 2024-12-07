@@ -4,8 +4,7 @@ const Gallery = () => {
     return (
         <div className=''>
             <div className='max-w-7xl mx-auto my-10'>
-                <h1 className="text-4xl text-center ">Photo Gallery</h1>
-                <p className='text-center mt-3'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita illo consectetur est atque magnam nostrum nulla distinctio saepe amet, provident quisquam rem reprehenderit! Praesentium quas ducimus vitae ad doloremque corporis ad doloremque corporis ad doloremque corporis!</p>
+                <h1 className="text-5xl text-center font-lato font-extrabold">Photo Gallery</h1>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-4'> 
                 <img className='h-[400px]' src="https://i.ibb.co.com/vLPGgYq/ahsan-manzil-pink-palace-front-768-o.jpg"

@@ -12,13 +12,13 @@ const GuideInfo = () => {
     <div className="max-w-7xl mx-auto my-10">
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         <div className="col-span-2 mx-4 md:mx-0">
-          <h1 className="font-lato text-4xl text-orange-400 font-extrabold md:text-7xl">
+          <h1 className="font-lato text-3xl text-orange-400 font-extrabold md:text-5xl">
             {name}
           </h1>
           <p className="text-lg text-[#121111b2] font-semibold mt-2">
             {continent} Guide
           </p>
-          <p className="text-[#121111b2] text-xl mt-4">Work Experience:</p>
+          <p className="text-xl font-medium mt-4">Work Experience:</p>
           <ul className="text-[#121111b2] mt-2 md:mr-4">
             <li>
               <strong>Started:</strong> {workExperience.started}
@@ -30,7 +30,7 @@ const GuideInfo = () => {
               <strong>Specialization:</strong> {workExperience.specialization}
             </li>
           </ul>
-          <p className="text-[#121111b2] text-xl mt-6">About {name}:</p>
+          <p className=" text-xl font-medium mt-6">About {name}:</p>
           <p className="text-[#121111b2] mt-2 md:mr-4">{info}</p>
         </div>
         <div className="col-span-1">
@@ -44,7 +44,7 @@ const GuideInfo = () => {
               rel="noopener noreferrer"
               href="#"
               aria-label="Email"
-              className="p-2 rounded-md bg-orange-400 hover:bg-[#131313B2] dark:text-gray-800 hover:dark:text-violet-600"
+              className="p-2 rounded-md bg-orange-400 hover:bg-[#383838] dark:text-gray-800 hover:dark:text-violet-600"
             >
               <IoMdMail className="w-5 h-5 text-white "></IoMdMail>
             </a>
@@ -52,7 +52,7 @@ const GuideInfo = () => {
               rel="noopener noreferrer"
               href="#"
               aria-label="Instagram"
-              className="p-2 rounded-md bg-orange-400 hover:bg-[#131313B2] dark:text-gray-800 hover:dark:text-violet-600"
+              className="p-2 rounded-md bg-orange-400 hover:bg-[#383838] dark:text-gray-800 hover:dark:text-violet-600"
             >
               <FaInstagram className="w-5 h-5 text-white"></FaInstagram>
             </a>
@@ -60,7 +60,7 @@ const GuideInfo = () => {
               rel="noopener noreferrer"
               href="#"
               aria-label="Twitter"
-              className="p-2 rounded-md bg-orange-400 hover:bg-[#131313B2] dark:text-gray-800 hover:dark:text-violet-600"
+              className="p-2 rounded-md bg-orange-400 hover:bg-[#383838] dark:text-gray-800 hover:dark:text-violet-600"
             >
               <FaTwitter className="w-5 h-5 text-white"></FaTwitter>
             </a>
@@ -68,7 +68,7 @@ const GuideInfo = () => {
               rel="noopener noreferrer"
               href="#"
               aria-label="LinkedIn"
-              className="p-2 rounded-md bg-orange-400 hover:bg-[#131313B2] dark:text-gray-800 hover:dark:text-violet-600"
+              className="p-2 rounded-md bg-orange-400 hover:bg-[#383838] dark:text-gray-800 hover:dark:text-violet-600"
             >
               <FaLinkedinIn className="w-5 h-5 text-white"></FaLinkedinIn>
             </a>

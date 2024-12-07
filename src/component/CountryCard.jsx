@@ -11,21 +11,21 @@ const CountryCard = ({ touristSpot }) => {
         alt="avatar"
       />
 
-      <div class="py-5 text-center px-2">
+      <div class="py-5 text-center px-4">
         <a
           href="#"
-          class="block text-xl font-bold text-gray-800 dark:text-white"
+          class="block font-lato text-3xl font-extrabold dark:text-white"
           tabindex="0"
           role="link"
         >
           {country}
         </a>
-        <p>${average_cost}</p>
-        <p class="text-sm text-justify text-gray-700 dark:text-gray-200">
-          {description.slice(0,230)}
+        <p className="text-orange-400 text-3xl font-bold my-4">${average_cost}</p>
+        <p class=" text-justify text-[#121111b2] dark:text-gray-200">
+          {description.slice(0,200)}
         </p>
-        <Link to={`/touristsSpot/${_id}`} className="card-actions justify-center">
-          <button className="btn btn-primary">View Details</button>
+        <Link to={`/touristsSpot/${_id}`} className="card-actions mt-6 justify-center">
+          <button className="btn text-white bg-orange-400 hover:bg-[#383838]">View Details</button>
         </Link>
       </div>
     </div>

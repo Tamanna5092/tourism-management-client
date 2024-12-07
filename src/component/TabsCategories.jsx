@@ -20,8 +20,8 @@ const TabsCategories = () => {
   return (
     <Tabs>
       <div className="my-10 max-w-7xl mx-auto">
-        <h1 className="font-lato text-center text-4xl font-bold">Go Exotic Places</h1>
-        <p className="text-center mt-4">
+        <h1 className="font-lato text-center text-5xl font-bold">Go Exotic Places</h1>
+        <p className="text-[#121111b2] text-center mt-4">
           When it comes to exploring exotic places, the choices are numerous.
           Whether you like peaceful destinations or vibrant landscapes, we have
           offers for you.This beautiful destination boasts stunning landscapes,
