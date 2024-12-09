@@ -76,7 +76,7 @@ const GuideInfo = () => {
         </div>
       </div>
       <div className="mx-4 md:mx-0">
-        <p className="text-[#818181] mt-8">{description}</p>
+        <p className="text-[#121111b2] mt-10">{description}</p>
       </div>
     </div>
   );
