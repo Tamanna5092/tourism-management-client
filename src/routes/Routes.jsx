@@ -10,6 +10,7 @@ import AllTouristSpots from "../pages/AllTouristSpots";
 import UpdateTouristSpot from "../pages/UpdateTouristSpot";
 import ErrorPage from "../pages/ErrorPage";
 import GuideInfo from "../pages/GuideInfo";
+import Blog from "../pages/Blog";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
           path: '/guideInfo/:id',
           element: <GuideInfo></GuideInfo>,
           loader: ()=> fetch('../guides.json')
+        },
+        {
+          path: '/blog',
+          element: <Blog></Blog>
         }
     ]
   },

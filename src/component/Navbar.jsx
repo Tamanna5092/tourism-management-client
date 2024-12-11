@@ -64,7 +64,7 @@ const Navbar = () => {
                   <Link to='/myListedSpots'>My Listed Spots</Link>
                 </li>
                 <li className="hover:bg-[#383838] rounded-lg hover:text-white">
-                  <Link to=''>Blog</Link>
+                  <Link to='/blog'>Blog</Link>
                 </li>
                 <li className="hover:bg-[#383838] rounded-lg hover:text-white">
                   <Link to=''>About</Link>

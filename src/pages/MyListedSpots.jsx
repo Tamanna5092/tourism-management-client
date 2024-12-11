@@ -36,11 +36,11 @@ const MyListedSpots = () => {
   return (
     <section class="container px-4 mx-auto">
       <div class="flex items-center gap-x-3">
-        <h2 class="text-lg font-medium text-gray-800 dark:text-white">
+        <h2 class="text-lg font-medium dark:text-white">
           My Listed Tourist Spots
         </h2>
 
-        <span class="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">
+        <span class="px-3 py-1 text-xs text-white bg-orange-400 rounded-full dark:bg-gray-800 dark:text-blue-400">
           {touristsSpots.length}
         </span>
       </div>
@@ -54,7 +54,7 @@ const MyListedSpots = () => {
                   <tr>
                     <th
                       scope="col"
-                      class="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                      class="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-[#383838] dark:text-gray-400"
                     >
                       <div class="flex items-center gap-x-3">
                         <span>Country</span>
@@ -63,7 +63,7 @@ const MyListedSpots = () => {
 
                     <th
                       scope="col"
-                      class="px-12 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                      class="px-12 py-3.5 text-sm font-normal text-left rtl:text-right text-[#383838] dark:text-gray-400"
                     >
                       <div class="flex items-center gap-x-3">
                         <span>Tourist Spot</span>
@@ -72,7 +72,7 @@ const MyListedSpots = () => {
 
                     <th
                       scope="col"
-                      class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                      class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-[#383838] dark:text-gray-400"
                     >
                       <div class="flex items-center gap-x-3">
                         <span>Location</span>
@@ -81,20 +81,20 @@ const MyListedSpots = () => {
 
                     <th
                       scope="col"
-                      class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                      class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-[#383838] dark:text-gray-400"
                     >
                       Average Cost
                     </th>
 
                     <th
                       scope="col"
-                      class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                      class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-[#383838] dark:text-gray-400"
                     >
                       Seasonality
                     </th>
                     <th
                       scope="col"
-                      class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                      class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-[#383838] dark:text-gray-400"
                     >
                       Travel Time
                     </th>
@@ -134,7 +134,7 @@ const MyListedSpots = () => {
                       <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
                         {touristSpot.location}
                       </td>
-                      <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+                      <td class="px-4 py-4 text-sm text-orange-400 dark:text-gray-300 whitespace-nowrap">
                         ${touristSpot.average_cost}
                       </td>
                         <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
