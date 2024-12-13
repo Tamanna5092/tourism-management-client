@@ -37,10 +37,10 @@ const AllTouristSpots = () => {
             <p className="text-xl text-orange-400 font-bold my-2">
               ${touristsSpot.average_cost}
             </p>
-            <p>{touristsSpot.totaVisitorsPerYear}</p>
-            <p className="my-2">{touristsSpot.travel_time}</p>
-            <p>{touristsSpot.seasonality}</p>
-            <p className="my-2 text-justify text-[#121111b2]">
+            <p className="text-[#818181]">{touristsSpot.totaVisitorsPerYear}</p>
+            <p className="my-2 text-[#818181]">{touristsSpot.travel_time}</p>
+            <p className="text-[#818181]">{touristsSpot.seasonality}</p>
+            <p className="my-2 text-justify text-[#818181]">
               {touristsSpot.description.slice(0, 300)}
             </p>
             <Link

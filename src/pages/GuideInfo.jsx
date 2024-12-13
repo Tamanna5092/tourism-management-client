@@ -15,11 +15,11 @@ const GuideInfo = () => {
           <h1 className="font-lato text-3xl text-orange-400 font-extrabold md:text-5xl">
             {name}
           </h1>
-          <p className="text-lg text-[#121111b2] font-semibold mt-2">
+          <p className="text-lg text-[#818181] font-semibold mt-2">
             {continent} Guide
           </p>
           <p className="text-xl font-medium mt-4">Work Experience:</p>
-          <ul className="text-[#121111b2] mt-2 md:mr-4">
+          <ul className="text-[#818181] mt-2 md:mr-4">
             <li>
               <strong>Started:</strong> {workExperience.started}
             </li>
@@ -31,7 +31,7 @@ const GuideInfo = () => {
             </li>
           </ul>
           <p className=" text-xl font-medium mt-6">About {name}:</p>
-          <p className="text-[#121111b2] mt-2 md:mr-4">{info}</p>
+          <p className="text-[#818181] mt-2 md:mr-4">{info}</p>
         </div>
         <div className="col-span-1">
           <img
@@ -76,7 +76,7 @@ const GuideInfo = () => {
         </div>
       </div>
       <div className="mx-4 md:mx-0">
-        <p className="text-[#121111b2] mt-10">{description}</p>
+        <p className="text-[#818181] mt-10">{description}</p>
       </div>
     </div>
   );

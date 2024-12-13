@@ -13,7 +13,7 @@ const Navbar = () => {
   }
 
     return (
-        <div className='navbar bg-base-100 shadow-sm container px-4 mx-auto'>
+        <div className='navbar sticky top-0 z-10 bg-base-100 shadow-sm container px-4 mx-auto'>
           <div className='flex-1'>
             <Link to='/' className='flex gap-0 items-center'>
               <img className='w-14 h-14' src={logo} alt='' />
@@ -67,7 +67,7 @@ const Navbar = () => {
                   <Link to='/blog'>Blog</Link>
                 </li>
                 <li className="hover:bg-[#383838] rounded-lg hover:text-white">
-                  <Link to=''>About</Link>
+                  <Link to='/about'>About</Link>
                 </li>
                 <li className="hover:bg-[#383838] rounded-lg hover:text-white">
                   <Link to=''>Contact Us</Link>

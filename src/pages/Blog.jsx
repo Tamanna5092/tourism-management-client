@@ -28,7 +28,7 @@ const Blog = () => {
             <h1 className="font-lato text-3xl font-bold mt-4">
               The Joy of a Solo Vacation
             </h1>
-            <p className="text-[#383838] my-4">
+            <p className="text-[#818181] my-4">
               A solo vacation is a liberating experience that lets you explore
               the world on your terms. It offers the chance to connect deeply
               with yourself, embrace new challenges, and discover hidden gems
@@ -40,16 +40,16 @@ const Blog = () => {
             </p>
             <div className="flex flex-col justify-between my-4 md:flex-row">
               <div className="flex gap-6">
-                <p className="flex gap-2 items-center text-[#383838] hover:text-orange-400">
+                <p className="flex gap-2 items-center text-[#818181] hover:text-orange-400">
                   <MdDateRange className="w-5 h-5"></MdDateRange> 20/12/2024
                 </p>
-                <p className="flex gap-2 items-center text-[#383838] hover:text-orange-400">
+                <p className="flex gap-2 items-center text-[#818181] hover:text-orange-400">
                   <FaEye className="w-5 h-5"></FaEye> 68
                 </p>
-                <p className="flex gap-2 items-center text-[#383838] hover:text-orange-400">
+                <p className="flex gap-2 items-center text-[#818181] hover:text-orange-400">
                   <FaHeart className="w-5 h-5"></FaHeart> 26
                 </p>
-                <p className="flex gap-2 items-center text-[#383838] hover:text-orange-400">
+                <p className="flex gap-2 items-center text-[#818181] hover:text-orange-400">
                   <FaComment className="w-5 h-5"></FaComment> 4
                 </p>
               </div>
@@ -58,7 +58,7 @@ const Blog = () => {
                   rel="noopener noreferrer"
                   href="#"
                   aria-label="Facebook"
-                  className="text-[#383838] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
+                  className="text-[#818181] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
                 >
                   <FaFacebook className="w-5 h-5"></FaFacebook>
                 </a>
@@ -66,7 +66,7 @@ const Blog = () => {
                   rel="noopener noreferrer"
                   href="#"
                   aria-label="Instagram"
-                  className="text-[#383838] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
+                  className="text-[#818181] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
                 >
                   <FaInstagram className="w-5 h-5"></FaInstagram>
                 </a>
@@ -74,7 +74,7 @@ const Blog = () => {
                   rel="noopener noreferrer"
                   href="#"
                   aria-label="Twitter"
-                  className="text-[#383838] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
+                  className="text-[#818181] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
                 >
                   <FaTwitter className="w-5 h-5"></FaTwitter>
                 </a>
@@ -95,7 +95,7 @@ const Blog = () => {
             <h1 className="font-lato text-3xl font-bold mt-4">
               The Magic of a Family Vacation
             </h1>
-            <p className="text-[#383838] my-4">
+            <p className="text-[#818181] my-4">
               A family vacation is more than just a getaway—it’s a chance to
               bond, laugh, and create memories that last a lifetime. Whether
               building sandcastles on the beach, exploring theme parks, or
@@ -107,16 +107,16 @@ const Blog = () => {
             </p>
             <div className="flex flex-col justify-between my-4 md:flex-row">
               <div className="flex gap-6">
-                <p className="flex gap-2 items-center text-[#383838] hover:text-orange-400">
+                <p className="flex gap-2 items-center text-[#818181] hover:text-orange-400">
                   <MdDateRange className="w-5 h-5"></MdDateRange> 26/12/2024
                 </p>
-                <p className="flex gap-2 items-center text-[#383838] hover:text-orange-400">
+                <p className="flex gap-2 items-center text-[#818181] hover:text-orange-400">
                   <FaEye className="w-5 h-5"></FaEye> 87
                 </p>
-                <p className="flex gap-2 items-center text-[#383838] hover:text-orange-400">
+                <p className="flex gap-2 items-center text-[#818181] hover:text-orange-400">
                   <FaHeart className="w-5 h-5"></FaHeart> 35
                 </p>
-                <p className="flex gap-2 items-center text-[#383838] hover:text-orange-400">
+                <p className="flex gap-2 items-center text-[#818181] hover:text-orange-400">
                   <FaComment className="w-5 h-5"></FaComment> 14
                 </p>
               </div>
@@ -125,7 +125,7 @@ const Blog = () => {
                   rel="noopener noreferrer"
                   href="#"
                   aria-label="Facebook"
-                  className="text-[#383838] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
+                  className="text-[#818181] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
                 >
                   <FaFacebook className="w-5 h-5"></FaFacebook>
                 </a>
@@ -133,7 +133,7 @@ const Blog = () => {
                   rel="noopener noreferrer"
                   href="#"
                   aria-label="Instagram"
-                  className="text-[#383838] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
+                  className="text-[#818181] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
                 >
                   <FaInstagram className="w-5 h-5"></FaInstagram>
                 </a>
@@ -141,7 +141,7 @@ const Blog = () => {
                   rel="noopener noreferrer"
                   href="#"
                   aria-label="Twitter"
-                  className="text-[#383838] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
+                  className="text-[#818181] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
                 >
                   <FaTwitter className="w-5 h-5"></FaTwitter>
                 </a>
@@ -162,7 +162,7 @@ const Blog = () => {
             <h1 className="font-lato text-3xl font-bold mt-4">
               Travel The World In Only 30 Days
             </h1>
-            <p className="text-[#383838] my-4">
+            <p className="text-[#818181] my-4">
               Embark on an extraordinary 30-day adventure to explore the world’s
               most iconic destinations. From the bustling streets of Tokyo to
               the serene beaches of the Maldives, this whirlwind journey offers
@@ -176,16 +176,16 @@ const Blog = () => {
             </p>
             <div className="flex flex-col justify-between my-4 md:flex-row">
               <div className="flex gap-6">
-                <p className="flex gap-2 items-center text-[#383838] hover:text-orange-400">
+                <p className="flex gap-2 items-center text-[#818181] hover:text-orange-400">
                   <MdDateRange className="w-5 h-5"></MdDateRange> 20/12/2024
                 </p>
-                <p className="flex gap-2 items-center text-[#383838] hover:text-orange-400">
+                <p className="flex gap-2 items-center text-[#818181] hover:text-orange-400">
                   <FaEye className="w-5 h-5"></FaEye> 168
                 </p>
-                <p className="flex gap-2 items-center text-[#383838] hover:text-orange-400">
+                <p className="flex gap-2 items-center text-[#818181] hover:text-orange-400">
                   <FaHeart className="w-5 h-5"></FaHeart> 88
                 </p>
-                <p className="flex gap-2 items-center text-[#383838] hover:text-orange-400">
+                <p className="flex gap-2 items-center text-[#818181] hover:text-orange-400">
                   <FaComment className="w-5 h-5"></FaComment> 27
                 </p>
               </div>
@@ -194,7 +194,7 @@ const Blog = () => {
                   rel="noopener noreferrer"
                   href="#"
                   aria-label="Facebook"
-                  className="text-[#383838] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
+                  className="text-[#818181] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
                 >
                   <FaFacebook className="w-5 h-5"></FaFacebook>
                 </a>
@@ -202,7 +202,7 @@ const Blog = () => {
                   rel="noopener noreferrer"
                   href="#"
                   aria-label="Instagram"
-                  className="text-[#383838] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
+                  className="text-[#818181] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
                 >
                   <FaInstagram className="w-5 h-5"></FaInstagram>
                 </a>
@@ -210,7 +210,7 @@ const Blog = () => {
                   rel="noopener noreferrer"
                   href="#"
                   aria-label="Twitter"
-                  className="text-[#383838] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
+                  className="text-[#818181] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
                 >
                   <FaTwitter className="w-5 h-5"></FaTwitter>
                 </a>
@@ -231,7 +231,7 @@ const Blog = () => {
             <h1 className="font-lato text-3xl font-bold mt-4">
               Rediscover Love on a Couple’s Vacation
             </h1>
-            <p className="text-[#383838] my-4">
+            <p className="text-[#818181] my-4">
               A couple’s vacation is the perfect opportunity to rekindle romance
               and strengthen your bond. Whether strolling hand-in-hand along
               pristine beaches, enjoying candlelit dinners under starlit skies,
@@ -244,16 +244,16 @@ const Blog = () => {
             </p>
             <div className="flex flex-col justify-between my-4 md:flex-row">
               <div className="flex gap-6">
-                <p className="flex gap-2 items-center text-[#383838] hover:text-orange-400">
+                <p className="flex gap-2 items-center text-[#818181] hover:text-orange-400">
                   <MdDateRange className="w-5 h-5"></MdDateRange> 17/12/2024
                 </p>
-                <p className="flex gap-2 items-center text-[#383838] hover:text-orange-400">
+                <p className="flex gap-2 items-center text-[#818181] hover:text-orange-400">
                   <FaEye className="w-5 h-5"></FaEye> 48
                 </p>
-                <p className="flex gap-2 items-center text-[#383838] hover:text-orange-400">
+                <p className="flex gap-2 items-center text-[#818181] hover:text-orange-400">
                   <FaHeart className="w-5 h-5"></FaHeart> 19
                 </p>
-                <p className="flex gap-2 items-center text-[#383838] hover:text-orange-400">
+                <p className="flex gap-2 items-center text-[#818181] hover:text-orange-400">
                   <FaComment className="w-5 h-5"></FaComment> 9
                 </p>
               </div>
@@ -262,7 +262,7 @@ const Blog = () => {
                   rel="noopener noreferrer"
                   href="#"
                   aria-label="Facebook"
-                  className="text-[#383838] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
+                  className="text-[#818181] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
                 >
                   <FaFacebook className="w-5 h-5"></FaFacebook>
                 </a>
@@ -270,7 +270,7 @@ const Blog = () => {
                   rel="noopener noreferrer"
                   href="#"
                   aria-label="Instagram"
-                  className="text-[#383838] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
+                  className="text-[#818181] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
                 >
                   <FaInstagram className="w-5 h-5"></FaInstagram>
                 </a>
@@ -278,7 +278,7 @@ const Blog = () => {
                   rel="noopener noreferrer"
                   href="#"
                   aria-label="Twitter"
-                  className="text-[#383838] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
+                  className="text-[#818181] hover:text-orange-400 dark:text-gray-800 hover:dark:text-violet-600"
                 >
                   <FaTwitter className="w-5 h-5"></FaTwitter>
                 </a>
@@ -292,37 +292,37 @@ const Blog = () => {
         <div>
           <ul className="space-y-4">
             <h3 className="font-lato text-3xl font-bold">Categories</h3>
-            <li className="text-[#383838] hover:text-orange-400 cursor-pointer">
+            <li className="text-[#818181] hover:text-orange-400 cursor-pointer">
               Beach Vacations
             </li>
-            <li className="text-[#383838] hover:text-orange-400 cursor-pointer">
+            <li className="text-[#818181] hover:text-orange-400 cursor-pointer">
               Adventure Vacations
             </li>
-            <li className="text-[#383838] hover:text-orange-400 cursor-pointer">
+            <li className="text-[#818181] hover:text-orange-400 cursor-pointer">
               Cultural Vacations
             </li>
-            <li className="text-[#383838] hover:text-orange-400 cursor-pointer">
+            <li className="text-[#818181] hover:text-orange-400 cursor-pointer">
               Romantic Getaways
             </li>
-            <li className="text-[#383838] hover:text-orange-400 cursor-pointer">
+            <li className="text-[#818181] hover:text-orange-400 cursor-pointer">
               Family Vacations
             </li>
-            <li className="text-[#383838] hover:text-orange-400 cursor-pointer">
+            <li className="text-[#818181] hover:text-orange-400 cursor-pointer">
               Solo Vacations
             </li>
-            <li className="text-[#383838] hover:text-orange-400 cursor-pointer">
+            <li className="text-[#818181] hover:text-orange-400 cursor-pointer">
               Wellness Retreats
             </li>
-            <li className="text-[#383838] hover:text-orange-400 cursor-pointer">
+            <li className="text-[#818181] hover:text-orange-400 cursor-pointer">
               Luxury Escapes
             </li>
-            <li className="text-[#383838] hover:text-orange-400 cursor-pointer">
+            <li className="text-[#818181] hover:text-orange-400 cursor-pointer">
               Backpacking Trips
             </li>
-            <li className="text-[#383838] hover:text-orange-400 cursor-pointer">
+            <li className="text-[#818181] hover:text-orange-400 cursor-pointer">
               Ski Vacations
             </li>
-            <li className="text-[#383838] hover:text-orange-400 cursor-pointer">
+            <li className="text-[#818181] hover:text-orange-400 cursor-pointer">
               Food & Wine Tours
             </li>
           </ul>
@@ -342,7 +342,7 @@ const Blog = () => {
               <h4 className="font-lato text-2xl font-bold hover:text-orange-400 md:text-lg">
                 Discover Your Vacation
               </h4>
-              <p className="text-[#383838] mt-2 md:mt-4">23/11/2024</p>
+              <p className="text-[#818181] mt-2 md:mt-4">23/11/2024</p>
             </div>
           </div>
           <div className="grid grid-cols-1 gap-2 mt-6 md:grid-cols-3">
@@ -357,7 +357,7 @@ const Blog = () => {
               <h4 className="font-lato text-2xl font-bold hover:text-orange-400 md:text-lg">
                 The Ways To Travel
               </h4>
-              <p className="text-[#383838] mt-2 md:mt-4">27/11/2024</p>
+              <p className="text-[#818181] mt-2 md:mt-4">27/11/2024</p>
             </div>
           </div>
           <div className="grid grid-cols-1 gap-2 mt-6 md:grid-cols-3">
@@ -372,7 +372,7 @@ const Blog = () => {
               <h4 className="font-lato text-2xl font-bold hover:text-orange-400 md:text-lg">
                 Work Hard Often
               </h4>
-              <p className="text-[#383838] mt-2 md:mt-4">04/12/2024</p>
+              <p className="text-[#818181] mt-2 md:mt-4">04/12/2024</p>
             </div>
           </div>
         </div>
@@ -382,31 +382,31 @@ const Blog = () => {
           <div className="flex flex-col gap-2  mt-2">
             <a
               href=""
-              className="flex gap-2 items-center text-[#383838] hover:text-orange-400"
+              className="flex gap-2 items-center text-[#818181] hover:text-orange-400"
             >
               <FaFacebook className="w-5 h-5"></FaFacebook> Facebook
             </a>
             <a
               href=""
-              className="flex gap-2 items-center text-[#383838] hover:text-orange-400"
+              className="flex gap-2 items-center text-[#818181] hover:text-orange-400"
             >
               <FaInstagram className="w-5 h-5"></FaInstagram> Instagram
             </a>
             <a
               href=""
-              className="flex gap-2 items-center text-[#383838] hover:text-orange-400"
+              className="flex gap-2 items-center text-[#818181] hover:text-orange-400"
             >
               <FaTwitter className="w-5 h-5"></FaTwitter> Twitter
             </a>
             <a
               href=""
-              className="flex gap-2 items-center text-[#383838] hover:text-orange-400"
+              className="flex gap-2 items-center text-[#818181] hover:text-orange-400"
             >
               <FaLinkedin className="w-5 h-5"></FaLinkedin> LinkedIn
             </a>
             <a
               href=""
-              className="flex gap-2 items-center text-[#383838] hover:text-orange-400"
+              className="flex gap-2 items-center text-[#818181] hover:text-orange-400"
             >
               <TbWorldWww className="w-5 h-5"></TbWorldWww>{" "}
               www.starshelter.com.bd

@@ -21,7 +21,7 @@ const CountryCard = ({ touristSpot }) => {
           {country}
         </a>
         <p className="text-orange-400 text-3xl font-bold my-4">${average_cost}</p>
-        <p class=" text-justify text-[#121111b2] dark:text-gray-200">
+        <p class=" text-justify text-[#818181] dark:text-gray-200">
           {description.slice(0,200)}
         </p>
         <Link to={`/touristsSpot/${_id}`} className="card-actions mt-6 justify-center">

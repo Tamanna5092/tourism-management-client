@@ -67,7 +67,7 @@ const CountryDetails = () => {
                 <span className='text-orange-400'>{totalVisitors}</span>
             </div>
         </div>
-        <p className="font-lato mt-4 text-lg text-justify dark:text-gray-400">Description about tourist spot: <span className='font-roboto text-base text-[#121111b2]'>{description}</span></p>
+        <p className="font-lato mt-4 text-lg text-justify dark:text-gray-400">Description about tourist spot: <span className='font-roboto text-base text-[#818181]'>{description}</span></p>
     </div>
 </div>
     );

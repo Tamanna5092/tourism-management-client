@@ -11,6 +11,7 @@ import UpdateTouristSpot from "../pages/UpdateTouristSpot";
 import ErrorPage from "../pages/ErrorPage";
 import GuideInfo from "../pages/GuideInfo";
 import Blog from "../pages/Blog";
+import About from "../pages/About";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
         {
           path: '/blog',
           element: <Blog></Blog>
+        },
+        {
+          path: '/about',
+          element: <About></About>
         }
     ]
   },
