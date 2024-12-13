@@ -70,7 +70,7 @@ const Navbar = () => {
                   <Link to='/about'>About</Link>
                 </li>
                 <li className="hover:bg-[#383838] rounded-lg hover:text-white">
-                  <Link to=''>Contact Us</Link>
+                  <Link to='/contact'>Contact Us</Link>
                 </li>
                 <li className='mt-2'>
                   <button
