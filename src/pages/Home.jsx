@@ -5,6 +5,7 @@ import Gallery from '../component/Gallery';
 import OurGuides from '../component/OurGuides';
 import DreamPlace from '../component/DreamPlace';
 import Review from '../component/Review';
+import Agent from '../component/Agent';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <TabsCategories></TabsCategories>
             <Gallery></Gallery>
             <OurGuides></OurGuides>
+            <Agent></Agent>
             <Review></Review>
         </div>
     );
