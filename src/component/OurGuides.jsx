@@ -26,7 +26,7 @@ const OurGuides = () => {
         >
           {guides.map((guid, id) => (
             <SwiperSlide key={guid.id}>
-              <div className="flex flex-col justify-center max-w-sm p-6 rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
+              <div className="flex flex-col justify-center max-w-sm p-6 rounded-xl cursor-grab sm:px-12 dark:bg-gray-50 dark:text-gray-800">
                 <Link to={`/guideInfo/${id}`}>
                   <img
                     src={guid.image}

@@ -86,7 +86,7 @@ const Contact = () => {
                   </svg>
 
                   <span className="mx-2 text-[#818181] truncate w-72 dark:text-gray-400">
-                    acb@example.com
+                    starshelter@gmail.com
                   </span>
                 </p>
               </div>

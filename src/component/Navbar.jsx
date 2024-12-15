@@ -26,7 +26,7 @@ const Navbar = () => {
                 <Link to='/' className=''>Home</Link>
               </li>
                   {!user &&
-                <li className=' className="bg-orange-400" hover:bg-[#383838] rounded-xl'>
+                <li className='bg-orange-400 hover:bg-[#383838] rounded-xl'>
                   <Link to='/login'>Login</Link>
                 </li> 
                   }
