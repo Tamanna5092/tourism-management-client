@@ -123,6 +123,7 @@ const AddTouristSpot = () => {
       );
       console.log(data)
       toast.success("Touris Spot Added Successful!");
+      form.reset()
     } catch (error) {
       toast.error(error);
     }

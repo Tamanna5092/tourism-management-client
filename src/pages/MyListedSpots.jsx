@@ -34,9 +34,9 @@ const MyListedSpots = () => {
   }
 
   return (
-    <section class="container px-4 mx-auto">
+    <section class="container px-4 my-10 mx-auto">
       <div class="flex items-center gap-x-3">
-        <h2 class="text-lg font-medium dark:text-white">
+        <h2 class="font-lato text-2xl font-medium dark:text-white">
           My Listed Tourist Spots
         </h2>
 

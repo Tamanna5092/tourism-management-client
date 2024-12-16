@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from "../../assets/login.jpg";
 import { AuthContext } from "../../provider/AuthProvider";
 import toast from "react-hot-toast";
@@ -8,6 +8,8 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 const Login = () => {
   const { signIn, signInWithGoogle, signInWithGithub, showPassword, setShowPassword } = useContext(AuthContext)
   const navigate = useNavigate()
+  const location = useLocation()
+  const from = location.state || '/'
 
 
   // googel signIn
@@ -15,7 +17,7 @@ const Login = () => {
     try {
       await signInWithGoogle()
       toast.success('Sign in Successfull')
-      navigate('/')
+      navigate(from, {replace: true})
     } catch (error) {
       console.log(error)
       toast.error(error?.message)
@@ -26,7 +28,7 @@ const Login = () => {
     try {
       await signInWithGithub()
       toast.success('Sign in Successfull')
-      navigate('/')
+      navigate(from, {replace: true})
     } catch (error) {
       console.log(error)
       toast.error(error?.message)
@@ -44,7 +46,7 @@ const Login = () => {
       const result = await signIn(email, password)
       console.log(result.user)
       toast.success('Sign in Successfull')
-      navigate('/')
+      navigate(from, {replace: true})
     } catch (error) {
       console.log(error)
       toast.error(error?.message)
@@ -54,7 +56,7 @@ const Login = () => {
 
 
   return (
-    <div className="flex flex-col max-w-6xl mx-auto gap-4 md:flex-row">
+    <div className="flex flex-col max-w-6xl mx-auto gap-4 my-10 md:flex-row">
       {/* image */}
       <div className="w-full hidden md:w-1/2 md:block">
         <img className="h-full" src={img} alt="" />
@@ -144,7 +146,7 @@ const Login = () => {
               </div>
             </div>
             <button
-              className="w-full bg-success px-8 py-3 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50"
+              className="w-full text-white bg-orange-400 hover:bg-[#383838] px-8 py-3 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50"
             >
               Login
             </button>
@@ -155,7 +157,7 @@ const Login = () => {
               to={"/register"}
               rel="noopener noreferrer"
               href="#"
-              className="underline dark:text-gray-800"
+              className="underline hover:text-orange-400 dark:text-gray-800"
             >
               Register
             </Link>

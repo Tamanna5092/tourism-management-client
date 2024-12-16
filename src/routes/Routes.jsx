@@ -13,6 +13,7 @@ import GuideInfo from "../pages/GuideInfo";
 import Blog from "../pages/Blog";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -35,16 +36,16 @@ const router = createBrowserRouter([
         },
         {
           path: '/addTourisSpot',
-          element: <AddTouristSpot></AddTouristSpot>
+          element: <PrivateRoute><AddTouristSpot></AddTouristSpot></PrivateRoute>
         },
         {
           path: '/touristsSpot/:id',
-          element: <CountryDetails></CountryDetails>,
+          element: <PrivateRoute><CountryDetails></CountryDetails></PrivateRoute>,
           loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/touristsSpot/${params.id}`)
         },
         {
           path: '/myListedSpots',
-          element: <MyListedSpots></MyListedSpots>
+          element: <PrivateRoute><MyListedSpots></MyListedSpots></PrivateRoute>
         },
         {
           path: '/allTouristSpots',
@@ -52,7 +53,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/updateTouristSpot/:id',
-          element: <UpdateTouristSpot></UpdateTouristSpot>,
+          element: <PrivateRoute><UpdateTouristSpot></UpdateTouristSpot></PrivateRoute>,
           loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/touristsSpot/${params.id}`)
         },
         {

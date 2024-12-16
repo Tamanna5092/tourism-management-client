@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from '../../assets/register-img.png'
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { AuthContext } from "../../provider/AuthProvider";
@@ -9,6 +9,8 @@ const Register = () => {
   const {showPassword,setShowPassword, createUser, updateUserProfile, user, setUser} = useContext(AuthContext)
   const navigate = useNavigate()
   const [error, setError] = useState('')
+  const location = useLocation()
+  const from = location.state || '/'
 
   const handleRegister = async(e) =>{
     e.preventDefault()
@@ -36,7 +38,7 @@ const Register = () => {
       console.log(resutl)
       await updateUserProfile(username, photo)
       setUser({...user, displayName: username, photoURL: photo})
-      navigate('/')
+      navigate(from, {replace: true})
       toast.success('User created successfully!')
     } catch (error) {
       console.log(error)
@@ -46,7 +48,7 @@ const Register = () => {
 
 
   return (
-    <div className="flex flex-col max-w-6xl mx-auto gap-4 md:flex-row">
+    <div className="flex flex-col max-w-6xl mx-auto my-10 gap-4 md:flex-row">
       {/* image */}
       <div className="w-full md:w-1/2">
         <img className="h-full" src={img} alt="" />
@@ -106,25 +108,25 @@ const Register = () => {
             <span onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-4">{showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}</span>
             </div>
           </div>
-          <button className="block w-full bg-info p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600">
+          <button className="block w-full text-white bg-orange-400 hover:bg-[#383838] p-3 text-center rounded-sm dark:text-gray-50 dark:bg-violet-600">
             Register
           </button>
         </form>
         {setError && <p className="text-red-800 text-center">{error}</p>}
         <div className="flex justify-center">
-          <Link
-            to={"/login"}
+          <p
             className="text-sm text-center sm:px-6 dark:text-gray-600"
           >
             Already have an account?{" "}
-            <a
+            <Link
+            to={"/login"}
               rel="noopener noreferrer"
               href="#"
-              className="underline dark:text-gray-800"
+              className="underline hover:text-orange-400 dark:text-gray-800"
             >
               Login
-            </a>
-          </Link>
+            </Link>
+          </p>
         </div>
       </div>
       </div>

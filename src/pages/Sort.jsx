@@ -19,8 +19,8 @@ const Sort = ({ sort, setSort }) => {
           <option value="" disabled>
             Select Sort Order
           </option>
-          <option value="asc">Average Cost (Low to High)</option>
-          <option value="desc">Average Cost (High to Low)</option>
+          <option className=" hover:bg-[#383838]" value="asc">Average Cost (Low to High)</option>
+          <option className=" hover:bg-[#383838]" value="desc">Average Cost (High to Low)</option>
         </select> 
  
     </div>
