@@ -94,7 +94,7 @@ const Contact = () => {
               <div className="mt-6 w-80 md:mt-8">
                 <h3 className="text-gray-800 dark:text-gray-300 ">Follow us</h3>
 
-                <div className="flex mt-4 -mx-1.5 ">
+                <div className="flex mt-4 -mx-1.5">
                   <a
                     className="mx-1.5 dark:hover:text-blue-400 text-gray-400 transition-colors duration-300 transform hover:text-orange-400"
                     href="#"

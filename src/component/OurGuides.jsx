@@ -31,7 +31,7 @@ const OurGuides = () => {
                   <img
                     src={guid.image}
                     alt=""
-                    className="w-40 h-40 mx-auto rounded-full dark:bg-gray-500 aspect-square"
+                    className="w-40 h-40 mx-auto rounded-full dark:bg-gray-500 aspect-square hover:brightness-75"
                   />
                 </Link>
                 <div className="space-y-4 text-center divide-y dark:divide-gray-300">
@@ -40,7 +40,7 @@ const OurGuides = () => {
                       {guid.name}
                     </h2>
                     <p className="px-5 text-orange-400 text-xs my-4 sm:text-base dark:text-gray-600">
-                      {guid.continent} Guide
+                      {guid.country} Guide
                     </p>
                     <p className="text-justify text-[#818181]">{guid.info.slice(0, 110)}</p>
                   </div>

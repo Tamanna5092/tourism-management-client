@@ -19,7 +19,7 @@ const Blog = () => {
         <section className="">
           <div>
             <img
-              className="w-full h-[400px]"
+              className="w-full h-[400px] animate__animated animate__fadeInLeft"
               src="https://i.ibb.co.com/NKD3hWW/istockphoto-1917023956-612x612.jpg"
               alt=""
             />
@@ -86,7 +86,7 @@ const Blog = () => {
         <section className="mt-20">
           <div>
             <img
-              className="w-full h-[400px]"
+              className="w-full h-[400px] animate__animated animate__fadeInLeft"
               src="https://i.ibb.co.com/94wyyfh/pexels-astreyas-photo-10804119.jpg"
               alt=""
             />
@@ -153,7 +153,7 @@ const Blog = () => {
         <section className="mt-20">
           <div>
             <img
-              className="w-full h-[400px]"
+              className="w-full h-[400px] animate__animated animate__fadeInLeft"
               src="https://i.ibb.co.com/k9CHSqs/360-F-948939119-Q4c-Qj-Aoosy8-SQ60jjn-Vz0d8-Uhri-DCdi-D.jpg"
               alt=""
             />
@@ -222,7 +222,7 @@ const Blog = () => {
         <section className="mt-20">
           <div>
             <img
-              className="w-full h-[400px]"
+              className="w-full h-[400px] animate__animated animate__fadeInLeft"
               src="https://i.ibb.co.com/jbpHkyp/pexels-jmendezrf-1066801.jpg"
               alt=""
             />
@@ -290,8 +290,8 @@ const Blog = () => {
       <section className="col-span-1 px-4 md:px-0">
         {/* Categories */}
         <div>
-          <ul className="space-y-4">
-            <h3 className="font-lato text-3xl font-bold">Categories</h3>
+            <h3 className="font-lato text-3xl font-bold mb-4">Categories</h3>
+          <ul className="space-y-4 animate__animated animate__backInRight">
             <li className="text-[#818181] hover:text-orange-400 cursor-pointer">
               Beach Vacations
             </li>
@@ -333,7 +333,7 @@ const Blog = () => {
           <div className="grid grid-cols-1 gap-2 md:grid-cols-3">
             <div className="col-span-1">
               <img
-                className="w-full h-[300px] md:h-20"
+                className="w-full h-[300px] transform transition-transform hover:scale-110 md:h-20"
                 src="https://i.ibb.co.com/nRLjs9T/pexels-quang-nguyen-vinh-222549-6346796.jpg"
                 alt=""
               />
@@ -348,7 +348,7 @@ const Blog = () => {
           <div className="grid grid-cols-1 gap-2 mt-6 md:grid-cols-3">
             <div className="col-span-1">
               <img
-                className="w-full h-[300px] md:h-20"
+                className="w-full h-[300px] transform transition-transform hover:scale-110 md:h-20"
                 src="https://i.ibb.co.com/pf3h4b7/pexels-kirandeepsingh-28729410.jpg"
                 alt=""
               />
@@ -363,7 +363,7 @@ const Blog = () => {
           <div className="grid grid-cols-1 gap-2 mt-6 md:grid-cols-3">
             <div className="col-span-1">
               <img
-                className="w-full h-[300px] md:h-20"
+                className="w-full h-[300px] transform transition-transform hover:scale-110 md:h-20"
                 src="https://i.ibb.co.com/vwZpwB2/pexels-alessio-cesario-975080-1906879.jpg"
                 alt=""
               />

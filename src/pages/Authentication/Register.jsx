@@ -19,7 +19,6 @@ const Register = () => {
     const email = form.email.value
     const photo = form.photo.value
     const password = form.password.value
-    console.log({username,email, photo, password})
 
     
     if (password.length < 6) {
@@ -35,13 +34,11 @@ const Register = () => {
     try {
       // register email password
       const resutl = await createUser(email, password)
-      console.log(resutl)
       await updateUserProfile(username, photo)
       setUser({...user, displayName: username, photoURL: photo})
       navigate(from, {replace: true})
       toast.success('User created successfully!')
     } catch (error) {
-      console.log(error)
       toast.error(error?.message)
     }
   }

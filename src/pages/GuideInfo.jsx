@@ -35,7 +35,7 @@ const GuideInfo = () => {
         </div>
         <div className="col-span-1">
           <img
-            className="h-[400px] w-full bg-gray-200 p-6"
+            className="h-[400px] w-full bg-gray-200 p-6 animate__animated animate__fadeInRight"
             src={image}
             alt=""
           />

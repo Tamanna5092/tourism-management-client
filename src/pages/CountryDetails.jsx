@@ -5,8 +5,8 @@ const CountryDetails = () => {
     const touristsSpot = useLoaderData()
     const { _id, image, continent, country, tourist_spot, location, description, average_cost, totalVisitors, travel_time, seasonality } = touristsSpot;
     return (
-        <div class="  overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
-    <img class="object-cover w-full h-[600px] bg-cover bg-center" src={image} alt="Article"/>
+        <div class=" overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <img class="object-cover w-full h-[600px] animate__animated animate__fadeInDown" src={image} alt="Article"/>
 
     <div class="max-w-7xl mx-auto p-6">
         <div className='max-w-sm space-y-4 md:max-w-md lg:max-w-lg'>

@@ -6,22 +6,21 @@ import { SiHiltonhotelsandresorts } from "react-icons/si";
 
 const About = () => {
     return (
-        <div className=''>
-            <h1>About</h1>
-            <div className='max-w-7xl mx-auto grid grid-cols-1 gap-6 mt-10 px-4 md:grid-cols-5 md:px-0'>
+        <div className='my-20'>
+            <div className='max-w-7xl mx-auto grid grid-cols-1 gap-6 px-4 md:grid-cols-5 md:px-0'>
                 <div className='col-span-2'>
-                    <img className='w-full' src="https://i.ibb.co.com/k9CHSqs/360-F-948939119-Q4c-Qj-Aoosy8-SQ60jjn-Vz0d8-Uhri-DCdi-D.jpg" alt="" />
+                    <img className='w-full animate__animated animate__fadeInLeft' src="https://i.ibb.co.com/k9CHSqs/360-F-948939119-Q4c-Qj-Aoosy8-SQ60jjn-Vz0d8-Uhri-DCdi-D.jpg" alt="" />
                 </div>
                 <div className='col-span-3'>
                 <h3 className='font-lato text-3xl font-bold'>Why choose us</h3>
                 <p className='text-[#818181] my-2'>At Star Shelter, we are dedicated to providing a sanctuary of comfort, safety, and exceptional service for all our guests. People choose us because we prioritize creating a welcoming environment where every detail is thoughtfully curated to ensure a memorable stay. From our luxurious accommodations to personalized attention and state-of-the-art amenities, we aim to make every guest feel special. Whether you're here for relaxation, adventure, or celebration, Star Shelter offers a seamless blend of comfort and convenience, making us the trusted choice for travelers who seek excellence and warmth in their journeys.</p>
                 <ul className='grid grid-cols-1 space-y-2 md:grid-cols-2'>
-                    <li className='flex items-center gap-2'><FaRegHandPointRight className='text-orange-400'></FaRegHandPointRight><span className='text-[#818181]'>Sanctuary of Comfort and Safety</span></li>
-                    <li className='flex items-center gap-2'><FaRegHandPointRight className='text-orange-400'></FaRegHandPointRight><span className='text-[#818181]'>Exceptional Service</span></li>
-                    <li className='flex items-center gap-2'><FaRegHandPointRight className='text-orange-400'></FaRegHandPointRight><span className='text-[#818181]'>Luxurious Accommodations</span></li>
-                    <li className='flex items-center gap-2'><FaRegHandPointRight className='text-orange-400'></FaRegHandPointRight><span className='text-[#818181]'>Thoughtful Curation</span></li>
-                    <li className='flex items-center gap-2'><FaRegHandPointRight className='text-orange-400'></FaRegHandPointRight><span className='text-[#818181]'>Versatile Offerings</span></li>
-                    <li className='flex items-center gap-2'><FaRegHandPointRight className='text-orange-400'></FaRegHandPointRight><span className='text-[#818181]'>Trusted Choice</span></li>
+                    <li className='flex items-center gap-2'><FaRegHandPointRight className='text-orange-400 animate__animated animate__fadeInLeft'></FaRegHandPointRight><span className='text-[#818181]'>Sanctuary of Comfort and Safety</span></li>
+                    <li className='flex items-center gap-2'><FaRegHandPointRight className='text-orange-400 animate__animated animate__fadeInLeft'></FaRegHandPointRight><span className='text-[#818181]'>Exceptional Service</span></li>
+                    <li className='flex items-center gap-2'><FaRegHandPointRight className='text-orange-400 animate__animated animate__fadeInLeft'></FaRegHandPointRight><span className='text-[#818181]'>Luxurious Accommodations</span></li>
+                    <li className='flex items-center gap-2'><FaRegHandPointRight className='text-orange-400 animate__animated animate__fadeInLeft'></FaRegHandPointRight><span className='text-[#818181]'>Thoughtful Curation</span></li>
+                    <li className='flex items-center gap-2'><FaRegHandPointRight className='text-orange-400 animate__animated animate__fadeInLeft'></FaRegHandPointRight><span className='text-[#818181]'>Versatile Offerings</span></li>
+                    <li className='flex items-center gap-2'><FaRegHandPointRight className='text-orange-400 animate__animated animate__fadeInLeft'></FaRegHandPointRight><span className='text-[#818181]'>Trusted Choice</span></li>
                 </ul>
                 </div>
             </div>

@@ -16,10 +16,9 @@ const Login = () => {
   const handleGoogleLogIn = async() => {
     try {
       await signInWithGoogle()
-      toast.success('Sign in Successfull')
+      toast.success('Sign In Successfull')
       navigate(from, {replace: true})
     } catch (error) {
-      console.log(error)
       toast.error(error?.message)
     }
   }
@@ -30,7 +29,6 @@ const Login = () => {
       toast.success('Sign in Successfull')
       navigate(from, {replace: true})
     } catch (error) {
-      console.log(error)
       toast.error(error?.message)
     }
   }
@@ -40,16 +38,13 @@ const Login = () => {
     const form = e.target
     const email = form.email.value
     const password = form.password.value
-    console.log({email, password})
     try {
       // email password signIn
       const result = await signIn(email, password)
-      console.log(result.user)
       toast.success('Sign in Successfull')
       navigate(from, {replace: true})
     } catch (error) {
-      console.log(error)
-      toast.error(error?.message)
+      toast.error("Email and password don't match!")
     }
   }
 

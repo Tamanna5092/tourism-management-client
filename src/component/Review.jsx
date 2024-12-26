@@ -58,7 +58,7 @@ const Review = () => {
             />
             <div className="max-w-3xl mx-auto px-2 md:px-0">
             <p className="text-center text-[#818181] mt-4">
-            The Burj Khalifa is a masterpiece of modern architecture! The observation deck offers stunning views of Dubai, and the fountain show at night is mesmerizing. The building’s amenities, including dining and shopping, were fantastic. Definitely worth visiting.
+            The Anne Frank House provides a poignant insight into history. Visiting the secret annex where Anne Frank hid is a moving experience. The exhibits are well-curated, offering a deep reflection on her legacy. A must-visit for history enthusiasts.
             </p>
               <p className="flex text-orange-400 gap-1 justify-center my-4">
                 <FaStar className="w-5 h-5"></FaStar>
@@ -124,7 +124,7 @@ const Review = () => {
             />
             <div className="max-w-3xl mx-auto px-2 md:px-0">
             <p className="text-center text-[#818181] mt-4">
-            The Great Wall of China is a must-see for history lovers. Walking along its ancient paths was both awe-inspiring and humbling. The facilities, including clean restrooms and refreshments at key points, were excellent. A bucket-list destination!
+            The Colosseum in Rome is an iconic symbol of ancient history. Walking through its massive arches and learning about gladiatorial combat offers a fascinating glimpse into the past. Its architectural grandeur and historical significance make it a must-visit landmark.
             </p>
               <p className="flex text-orange-400 gap-1 justify-center my-4">
                 <FaStar className="w-5 h-5"></FaStar>

@@ -3,6 +3,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 const MyListedSpots = () => {
   const { user } = useContext(AuthContext);
@@ -16,19 +17,30 @@ const MyListedSpots = () => {
     const { data } = await axios(
       `${import.meta.env.VITE_API_URL}/touristsSpots/${user?.email}`
     );
-    console.log(data);
     setTouristsSpots(data);
   };
 
   const handleDelete = async(id) => {
-    console.log('Hello Delete')
     try {
-        const {data} = await axios.delete(`${import.meta.env.VITE_API_URL}/touristsSpot/${id}`)
-        console.log(data)
-        toast.success('Delete Successfull')
+          const result = await Swal.fire({
+            title: "Are you sure?",
+            text: "You want to remove this spot!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          })
+            if (result.isConfirmed) {
+              const {data} = await axios.delete(`${import.meta.env.VITE_API_URL}/touristsSpot/${id}`)
+                Swal.fire({
+                  title: "Deleted!",
+                  text: "Your spot has been deleted.",
+                  icon: "success"
+                }); 
+            }; 
         getData()
-    } catch (error) {
-        console.log(error.message)
+    } catch (error) { 
         toast.error(error);
     }
   }
@@ -116,9 +128,6 @@ const MyListedSpots = () => {
                               alt=""
                             />
                             <div>
-                              <h2 class="font-medium text-gray-800 dark:text-white ">
-                                {touristSpot.continent}
-                              </h2>
                               <p class="text-sm font-normal text-gray-600 dark:text-gray-400">
                                 {touristSpot.country}
                               </p>

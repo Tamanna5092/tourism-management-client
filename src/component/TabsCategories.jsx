@@ -31,54 +31,62 @@ const TabsCategories = () => {
         </p>
         <div className="flex justify-center items-center my-6">
           <TabList>
-            <Tab>Southeast Asia</Tab>
-            <Tab>Europe</Tab>
-            <Tab>America</Tab>
-            <Tab>Africa</Tab>
-            <Tab>Middle East</Tab>
-            <Tab>Central Asia</Tab>
+            <Tab>France</Tab>
+            <Tab>Italy</Tab>
+            <Tab>Spain</Tab>
+            <Tab>England</Tab>
+            <Tab>Germany</Tab>
+            <Tab>Netherlands</Tab>
+            <Tab>Switzerland</Tab>
           </TabList>
         </div>
 
         <TabPanel>
           <div className="grid grid-cols-1 gap-8 mx-2 my-10 md:grid-cols-2 lg:grid-cols-3 lg:mx-0">
             {
-              touristsSpots.filter(tourSpot => tourSpot.continent === "Southeast Asia").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
+              touristsSpots.filter(tourSpot => tourSpot.country === "France").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
             }
           </div>
         </TabPanel>
         <TabPanel>
         <div className="grid grid-cols-1 gap-8 mx-2 my-10 md:grid-cols-2 lg:grid-cols-3 lg:mx-0">
             {
-              touristsSpots.filter(tourSpot => tourSpot.continent === "Europe").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
+              touristsSpots.filter(tourSpot => tourSpot.country === "Italy").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
             }
           </div>
         </TabPanel>
         <TabPanel>
         <div className="grid grid-cols-1 gap-8 mx-2 my-10 md:grid-cols-2 lg:grid-cols-3 lg:mx-0">
             {
-              touristsSpots.filter(tourSpot => tourSpot.continent === "America").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
+              touristsSpots.filter(tourSpot => tourSpot.country === "Spain").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
             }
           </div>
         </TabPanel>
         <TabPanel>
         <div className="grid grid-cols-1 gap-8 mx-2 my-10 md:grid-cols-2 lg:grid-cols-3 lg:mx-0">
             {
-              touristsSpots.filter(tourSpot => tourSpot.continent === "Africa").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
+              touristsSpots.filter(tourSpot => tourSpot.country === "England").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
             }
           </div>
         </TabPanel>
         <TabPanel>
         <div className="grid grid-cols-1 gap-8 mx-2 my-10 md:grid-cols-2 lg:grid-cols-3 lg:mx-0">
             {
-              touristsSpots.filter(tourSpot => tourSpot.continent === "Middle East").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
+              touristsSpots.filter(tourSpot => tourSpot.country === "Germany").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
             }
           </div>
         </TabPanel>
         <TabPanel>
         <div className="grid grid-cols-1 gap-8 mx-2 my-10 md:grid-cols-2 lg:grid-cols-3 lg:mx-0">
             {
-              touristsSpots.filter(tourSpot => tourSpot.continent === "Central Asia").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
+              touristsSpots.filter(tourSpot => tourSpot.country === "Netherlands").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
+            }
+          </div>
+        </TabPanel>
+        <TabPanel>
+        <div className="grid grid-cols-1 gap-8 mx-2 my-10 md:grid-cols-2 lg:grid-cols-3 lg:mx-0">
+            {
+              touristsSpots.filter(tourSpot => tourSpot.country === "Switzerland").map((touristSpot, _id) => <CountryCard key={_id} touristSpot={touristSpot}></CountryCard>)
             }
           </div>
         </TabPanel>
