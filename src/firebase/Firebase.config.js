@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAcSklkSMevtrZdEMGEdp3EBl5BuPPE0r0",
-  authDomain: "starshelter-tourism.firebaseapp.com",
-  projectId: "starshelter-tourism",
-  storageBucket: "starshelter-tourism.firebasestorage.app",
-  messagingSenderId: "54447770557",
-  appId: "1:54447770557:web:76ad8fb90c6f71ef65e0d4"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase

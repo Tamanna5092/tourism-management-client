@@ -63,7 +63,7 @@ const Register = () => {
               name="username"
               id="username"
               placeholder="Username"
-              className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+              className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" required
             />
           </div>
           <div className="space-y-1 text-sm">
@@ -75,7 +75,7 @@ const Register = () => {
               name="email"
               id="email"
               placeholder="email"
-              className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+              className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" required
             />
           </div>
           <div className="space-y-1 text-sm">
@@ -87,7 +87,7 @@ const Register = () => {
               name="photo"
               id="photo"
               placeholder="photo"
-              className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+              className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" required
             />
           </div>
           <div className="space-y-1 text-sm">
@@ -100,7 +100,7 @@ const Register = () => {
               name="password"
               id="password"
               placeholder="******"
-              className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+              className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" required
             />
             <span onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-4">{showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}</span>
             </div>

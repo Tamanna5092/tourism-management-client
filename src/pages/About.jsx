@@ -59,7 +59,7 @@ const About = () => {
                 </div>
             </div>
         </div>
-    ); p-4
+    );
 };
 
 export default About;
