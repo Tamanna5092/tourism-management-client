@@ -1,25 +1,21 @@
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Sort from "./Sort";
-import { AuthContext } from "../provider/AuthProvider";
+import Sort from "./Sort"; 
 
-const AllTouristSpots = () => {
-  const { loading, setLoading } = useContext(AuthContext)
+const AllTouristSpots = () => { 
   const [touristsSpots, setTouristsSpots] = useState([]);
   const [sort, setSort] = useState("");
 
   useEffect(() => {
     const getData = async () => {
-      setLoading(true)
       const { data } = await axios(
         `${import.meta.env.VITE_API_URL}/touristsSpots?&sort=${sort}`
       );
       setTouristsSpots(data);
     };
-    setLoading(false)
     getData();
-  }, [sort, setLoading]);
+  }, [sort]);
 
   return (
     <div className="max-w-7xl mx-auto space-y-6 my-10">
